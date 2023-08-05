@@ -1,6 +1,3 @@
-# r3f-vite-starter
-personal React-three-fiber &amp; Vite starter based on Bruno Simon's starter
+# Portfolio
 
-- Clone it
-- `npm install`
-- `npm run dev`
+Test no 999
