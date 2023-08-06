@@ -43,12 +43,14 @@ section {
   padding: 20px 100px;
   align-items: flex-start;
   background-color: #00000025;
-  ul {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    li {
-      cursor: pointer;
-    }
+  flex-wrap: wrap;
+}
+ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  li {
+    cursor: pointer;
   }
 }

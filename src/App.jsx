@@ -12,12 +12,14 @@ import { useEffect, useRef } from "react";
 function About() {
   const img = useRef();
   const hover = () => {
+    img.current.replaceChildren();
     new hoverEffect({
       parent: img.current,
-      intensity: 0.5,
+      intensity: 0.2,
+      angle: 90,
       image1: "../me-1.jpg",
       image2: "../me-2.jpg",
-      displacementImage: "../dis-2.jpg",
+      displacementImage: "../dis-5.jpg",
     });
   };
   useEffect(() => {
