@@ -9,6 +9,19 @@ import "swiper/css";
 import "./styles/home.scss";
 import { useEffect, useRef } from "react";
 
+function Main() {
+  return (
+    <section id="main" className="w-full">
+      <div className="title">
+        <h1 className="">
+          My name is <b>Fettah</b>
+        </h1>
+        <h2 className="">A Frontend/Creative Developer</h2>
+      </div>
+    </section>
+  );
+}
+
 function About() {
   const img = useRef();
   const hover = () => {
@@ -127,14 +140,7 @@ function Contact() {
 export default function App() {
   return (
     <div id="app">
-      <section id="main" className="w-full">
-        <div className="title">
-          <h1 className="">
-            My name is <b>Fettah</b>
-          </h1>
-          <h2 className="">A Frontend/Creative Developer</h2>
-        </div>
-      </section>
+      <Main />
       <About />
       <Projects />
       <Contact />
