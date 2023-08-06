@@ -5,6 +5,7 @@ import { Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
+import "./styles/home.scss";
 
 function Projects() {
   return (
@@ -48,6 +49,45 @@ function Projects() {
   );
 }
 
+function Contact() {
+  return (
+    <section id="contact" className="">
+      <div>
+        <p>You can find me through here</p>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a target="_blank" href="https://github.com/FettahAud">
+              Github
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.linkedin.com/in/fettah-aud/">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/fettahaud">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/fettahaud/">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/Fettah_Aud">
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  );
+}
+
 export default function App() {
   return (
     <div id="app">
@@ -78,6 +118,7 @@ export default function App() {
         </div>
       </section>
       <Projects />
+      <Contact />
     </div>
   );
 }
