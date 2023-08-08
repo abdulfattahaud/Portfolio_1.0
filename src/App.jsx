@@ -78,22 +78,20 @@ function Projects() {
         className="w-full px-5"
       >
         <SwiperSlide>
-          <img src="https://placehold.co/100X100" className="" />
+          <img src="../projects/01.jpg" className="" />
+          <a href="https://sphere-curl.vercel.app/" target="_blank" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://placehold.co/100X100" className="" />
+          <img src="../projects/02.jpg" className="" />
+          <a href="https://animating-triangles.vercel.app/" target="_blank" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://placehold.co/100X100" className="" />
+          <img src="../projects/03.jpg" className="" />
+          <a href="https://moving-fox.vercel.app/" target="_blank" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://placehold.co/100X100" className="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://placehold.co/100X100" className="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://placehold.co/100X100" className="" />
+          <img src="../projects/05.jpg" className="" />
+          <a href="https://travel-visualizer.vercel.app/" target="_blank" />
         </SwiperSlide>
       </Swiper>
     </section>
