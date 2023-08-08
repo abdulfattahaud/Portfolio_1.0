@@ -67,7 +67,14 @@ function Projects() {
       <p className="text-2xl py-5">Here are some of my projects</p>
       <Swiper
         spaceBetween={200}
-        slidesPerView={2}
+        breakpoints={{
+          337: {
+            slidesPerView: 1,
+          },
+          992: {
+            slidesPerView: 2,
+          },
+        }}
         grabCursor={true}
         centeredSlides={true}
         pagination={{

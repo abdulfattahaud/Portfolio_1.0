@@ -21,11 +21,14 @@ section {
 }
 #projects {
   .swiper .swiper-slide {
-    height: 600px;
-    @media screen and (max-width: 992px) {
-      height: unset;
-      width: 100%;
+    @media screen and (max-width: 556px) {
+      height: 300px;
     }
+    @media screen and (max-width: 760px) {
+      height: 400px;
+    }
+    height: 500px;
+
     border: 1px solid black;
     user-select: none;
     position: relative;
