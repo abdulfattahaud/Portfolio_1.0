@@ -4,14 +4,24 @@ section {
   justify-content: center;
   align-items: center;
 }
-.title h1 {
-  font-size: 50px;
-  line-height: 40px;
-  cursor: default;
-}
-.title h2 {
-  font-size: 20px;
-  cursor: default;
+#main .title {
+  h1 {
+    font-size: 50px;
+    line-height: 40px;
+    cursor: default;
+  }
+  h2 {
+    font-size: 20px;
+    cursor: default;
+  }
+  h1,
+  h2 {
+    // display: flex;
+    span {
+      // display: inline-block;
+      position: relative;
+    }
+  }
 }
 #about {
   margin-bottom: 100px;
