@@ -14,6 +14,7 @@ section {
   cursor: default;
 }
 #about {
+  margin-bottom: 100px;
   .photo-wrapper {
     width: 400px;
     height: 400px;
@@ -53,20 +54,36 @@ section {
   border-top: 1px solid rgba(0, 0, 0, 0.789);
   margin-top: 50px;
   justify-content: space-between;
-  padding: 20px 100px;
+  padding: 0;
   align-items: flex-start;
   background-color: #272829;
   flex-wrap: wrap;
+  flex-direction: column;
   > * {
     color: #fff6e0;
   }
-}
-ul {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  li {
-    cursor: pointer;
+  .contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // flex-direction: ;
+    padding: 20px 100px;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+  .cop {
+    width: 100%;
+    padding: 20px 100px;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
