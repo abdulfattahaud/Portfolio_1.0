@@ -10,9 +10,6 @@ export default function App() {
   return (
     <div id="app">
       <Main />
-      <About />
-      <Projects />
-      <Footer />
     </div>
   );
 }

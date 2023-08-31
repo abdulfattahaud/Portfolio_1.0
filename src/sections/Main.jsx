@@ -4,8 +4,9 @@ import { useEffect } from "react";
 
 export default function Main() {
   const titleRef = useRef();
+  const scrollRef = useRef();
   const secondTitleRef = useRef();
-  const title = "My name is Fettah";
+  const title = "This is Fettah";
   const secondTitle = "A Frontend/Creative Developer";
   const tl = gsap.timeline();
   useEffect(() => {
@@ -20,7 +21,8 @@ export default function Main() {
         opacity: 1,
         stagger: 0.05,
         top: 0,
-      }
+      },
+      "+=0.5"
     ).fromTo(
       secondTitleRef.current.children,
       {
@@ -35,6 +37,18 @@ export default function Main() {
       },
       "-=1.2"
     );
+    // fix this
+    gsap.to(
+      scrollRef.current,
+      {
+        opacity: 0,
+        // repeat: -1,
+      },
+      {
+        opacity: 1,
+      }
+    );
+    // .repeat(-1);
   });
   return (
     <section id="main" className="w-full">
@@ -49,6 +63,9 @@ export default function Main() {
             <span key={i}>{e}</span>
           ))}
         </h2>
+      </div>
+      <div ref={scrollRef} className="scroll">
+        <img src="../../svg/scroll-down.svg" />
       </div>
     </section>
   );

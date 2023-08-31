@@ -20,17 +20,8 @@ export default function About() {
   return (
     <section id="about" className="gap-5 flex-col md:flex-row mx-5 h-full">
       <div className="text-cont">
-        <p className="text-2xl">
-          Hello, how are you, today we are going to learn about AbdelFattah
-          (me).
-        </p>
-        <br />
-        <p>
-          I'm a person from Levant, lives and study Web Development in Türkiye
-          Istanbul.
-          <br /> Also I'm in my twenties (flower of my youth)
-          <br /> See me right there =={">"}
-        </p>
+        <p className="text-2xl">About me</p>
+        <p>I'm A Frontend Developer in my twenties</p>
       </div>
       <div ref={img} className="photo-wrapper"></div>
     </section>
