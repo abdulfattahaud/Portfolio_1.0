@@ -9,8 +9,26 @@ section {
   display: none;
 }
 
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
+#mouse {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  inset: 50%;
+  background-color: #ffecd1;
+  border-radius: 50%;
+  z-index: 1000;
+  user-select: none;
+  pointer-events: none;
+}
 #main {
+  background-color: #212529;
   .title {
+    color: white;
     h1 {
       font-size: 50px;
       line-height: 40px;
