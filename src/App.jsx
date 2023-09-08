@@ -1,36 +1,25 @@
-// Import Swiper styles
-import "swiper/css";
 import "./styles/home.scss";
 import Main from "./sections/Main.jsx";
-import About from "./sections/About";
-import Projects from "./sections/Projects";
-import Footer from "./sections/Footer";
-import { useEffect, useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
+import Mouse from "./components/Mouse";
+import { HoverProvider } from "./components/Mouse";
+import { Menu, MenuIcon } from "./components/Menu";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function App() {
-  const mouse = useRef();
-  const moveLight = () => {
-    const x = gsap.quickTo("#mouse", "left", {
-      duration: 0.5,
-    });
-    const y = gsap.quickTo("#mouse", "top", {
-      duration: 0.5,
-    });
+  const [isOpen, setIsOpen] = useState(false);
 
-    window.addEventListener("pointermove", (e) => {
-      x(e.clientX);
-      y(e.clientY);
-    });
-  };
-  useLayoutEffect(() => {
-    moveLight();
-    // return () => window.removeEventListener("pointermove" );
-  });
+  useEffect(() => {
+    console.log(isOpen);
+  }, [isOpen]);
   return (
-    <div id="app">
-      <div ref={mouse} id="mouse"></div>
-      <Main />
-    </div>
+    <HoverProvider>
+      <div id="app">
+        <Mouse />
+        <MenuIcon isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Menu isOpen={isOpen} />
+        <Main />
+      </div>
+    </HoverProvider>
   );
 }

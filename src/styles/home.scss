@@ -14,6 +14,23 @@ section {
 *::after {
   cursor: none !important;
 }
+#menu-icon {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  z-index: 4;
+  path {
+    transition: all 0.3s ease;
+  }
+}
+#menu {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 3;
+  background: red;
+  clip-path: circle(0% at 95% 10%);
+}
 #mouse {
   position: absolute;
   width: 20px;
@@ -24,9 +41,12 @@ section {
   z-index: 1000;
   user-select: none;
   pointer-events: none;
+  mix-blend-mode: exclusion;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 #main {
-  background-color: brown;
+  background-color: #111e2d;
   .title {
     color: white;
     h1 {
