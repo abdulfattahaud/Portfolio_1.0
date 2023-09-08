@@ -8,7 +8,7 @@ export function MenuIcon({ isOpen, setIsOpen }) {
   const [hover, setHover] = useState(false);
   const icon = useRef();
   const iconHover = () => {
-    setIsHovered(2.5);
+    setIsHovered(4);
     setHover(true);
   };
   const iconUnHover = () => {
@@ -29,16 +29,21 @@ export function MenuIcon({ isOpen, setIsOpen }) {
       viewBox="0 0 39 24"
       fill="none"
     >
-      <path d="M2 2H37" stroke="white" strokeWidth="3" strokeLinecap="round" />
+      <path
+        d="M2 2H37"
+        stroke={isOpen ? "#111e2d" : "#e1e1e1"}
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
       <path
         d={hover ? "M2 12H37" : "M2 12H29"}
-        stroke="white"
+        stroke={isOpen ? "#111e2d" : "#e1e1e1"}
         strokeWidth="3"
         strokeLinecap="round"
       />
       <path
         d={hover ? "M2 22H37" : "M2 22H20"}
-        stroke="white"
+        stroke={isOpen ? "#111e2d" : "#e1e1e1"}
         strokeWidth="3"
         strokeLinecap="round"
       />
@@ -48,16 +53,42 @@ export function MenuIcon({ isOpen, setIsOpen }) {
 
 export function Menu({ isOpen }) {
   const menu = useRef();
+  const { setIsHovered } = useHover();
+  const menuItems = ["Home", "About", "Works", "Contact"];
   if (isOpen) {
     gsap.to(menu.current, {
-      clipPath: "circle(150% at 95% 10%)",
+      clipPath: "circle(150% at calc(100% - 45px) 45px)",
       ease: "in-out",
-      duration: 1,
+      duration: 0.5,
     });
   } else {
     gsap.to(menu.current, {
-      clipPath: "circle(0% at 95% 10%)",
+      clipPath: "circle(0% at calc(100% - 45px) 45px)",
+      duration: 0.5,
     });
   }
-  return <div ref={menu} id="menu"></div>;
+
+  return (
+    <div ref={menu} id="menu">
+      <div
+        className="menu-wrapper"
+        onMouseEnter={() => setIsHovered(0)}
+        onMouseLeave={() => setIsHovered(1)}
+      >
+        {menuItems.map((item, i) => {
+          const [hover, setHover] = useState(false);
+          return (
+            <div
+              key={i}
+              className={`menu-item ${hover ? "hover" : ""}`}
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+            >
+              {item}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }

@@ -7,7 +7,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 export default function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
     console.log(isOpen);

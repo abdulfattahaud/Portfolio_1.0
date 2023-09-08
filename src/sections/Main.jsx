@@ -43,10 +43,9 @@ export default function Main() {
   }, []);
   return (
     <section id="main" className="w-full">
-      <div className="menu"></div>
       <div
         className="title"
-        onMouseEnter={() => setIsHovered(4)}
+        onMouseEnter={() => setIsHovered(10)}
         onMouseLeave={() => setIsHovered(1)}
       >
         <h1 ref={titleRef}>
