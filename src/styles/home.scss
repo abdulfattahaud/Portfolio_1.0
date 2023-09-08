@@ -31,9 +31,10 @@ section {
   background: #e1e1e1;
   clip-path: circle(0% at calc(100% - 45px) 45px);
   display: flex;
-  justify-content: center;
+  align-items: center;
   .menu-wrapper {
     width: 100%;
+    // height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
