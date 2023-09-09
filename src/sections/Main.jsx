@@ -1,11 +1,14 @@
 import { gsap } from "gsap";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { useHover } from "../components/Mouse";
 
 export default function Main() {
   const titleRef = useRef();
   const scrollRef = useRef();
   const secondTitleRef = useRef();
+  const { setIsHovered } = useHover();
+
   const title = "This is Fettah";
   const secondTitle = "A Frontend/Creative Developer";
   const tl = gsap.timeline();
@@ -37,22 +40,14 @@ export default function Main() {
       },
       "-=1.2"
     );
-    // fix this
-    gsap.to(
-      scrollRef.current,
-      {
-        opacity: 0,
-        // repeat: -1,
-      },
-      {
-        opacity: 1,
-      }
-    );
-    // .repeat(-1);
-  });
+  }, []);
   return (
     <section id="main" className="w-full">
-      <div className="title">
+      <div
+        className="title"
+        onMouseEnter={() => setIsHovered(10)}
+        onMouseLeave={() => setIsHovered(1)}
+      >
         <h1 ref={titleRef}>
           {[...title].map((e, i) => (
             <span key={i}>{e}</span>
