@@ -1,4 +1,3 @@
-import App from "./App";
 import RouterApp from "./RouterApp.jsx";
 import "./index.scss";
 import React from "react";

@@ -9,7 +9,7 @@ export function Menu({ isOpen }) {
   const menu = useRef();
   const { setIsHovered } = useHover();
   const menuItems = [
-    { label: "Home", route: "home" },
+    { label: "Home", route: "/" },
     { label: "About", route: "about" },
     { label: "Works", route: "works" },
     { label: "Contact", route: "contact" },
@@ -42,7 +42,7 @@ export function Menu({ isOpen }) {
               className={`menu-item ${hover ? "hover" : ""}`}
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
-              onClick={() => navigate("/about")}
+              onClick={() => navigate(item.route)}
             >
               {item.label}
             </div>
