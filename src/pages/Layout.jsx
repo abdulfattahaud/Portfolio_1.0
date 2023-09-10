@@ -1,4 +1,3 @@
-import "./styles/home.scss";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import Mouse from "./components/Mouse";
@@ -6,7 +5,7 @@ import { HoverProvider } from "./components/Mouse";
 import { Menu } from "./components/Menu";
 import { MenuIcon } from "./components/MenuIcon";
 
-export default function App() {
+export default function Layout() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
