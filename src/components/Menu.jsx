@@ -13,7 +13,7 @@ export function Menu() {
   const menuItems = [
     { label: "Home", route: "/" },
     { label: "About", route: "about" },
-    { label: "Works", route: "works" },
+    { label: "Projects", route: "projects" },
     { label: "Contact", route: "contact" },
   ];
   if (menuState) {
