@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import store from "../store.js";
 
 export function Menu() {
-  const {menuState, changeMenuState} = store()
+  const { menuState, changeMenuState } = store();
   const navigate = useNavigate();
   const menu = useRef();
   const { setIsHovered } = useHover();
@@ -18,22 +18,21 @@ export function Menu() {
   ];
   if (menuState) {
     gsap.to(menu.current, {
-      clipPath: "circle(150% at calc(100% - 45px) 45px)",
+      clipPath: "circle(150% at calc(100% - 90px) 60px)",
       ease: "in-out",
       duration: 0.5,
     });
   } else {
     gsap.to(menu.current, {
-      clipPath: "circle(0% at calc(100% - 45px) 45px)",
+      clipPath: "circle(0% at calc(100% - 90px) 60px)",
       duration: 0.5,
     });
   }
 
   const clickHandler = (item) => {
-    navigate(item.route)
-    changeMenuState(false)
-  }
-
+    navigate(item.route);
+    changeMenuState(false);
+  };
 
   return (
     <div ref={menu} id="menu">

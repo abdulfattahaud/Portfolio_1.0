@@ -56,7 +56,8 @@ section {
         transition: height 0.3s ease;
         will-change: height;
         clip-path: inset(50% 0 50% 0);
-        transition: clip-path 0.4s var(--ease),
+        transition:
+          clip-path 0.4s var(--ease),
           -webkit-clip-path 0.4s var(--ease);
       }
       &.hover::before {
@@ -81,14 +82,14 @@ section {
 }
 .subpage-header {
   width: 100%;
-  padding: 80px 70px;
-  //height: ;
-display: flex;
+  padding-top: 80px;
+  margin-bottom: 50px ;
+  display: flex;
   flex-direction: column;
   .upper {
     display: flex;
     width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, .4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     font-size: 24px;
     margin-bottom: 5px;
   }
@@ -127,7 +128,7 @@ display: flex;
   }
 }
 #about {
-  height: 100%  ;
+  height: 100%;
 }
 // #projects {
 //   .swiper .swiper-slide {
