@@ -1,8 +1,11 @@
 import { useRef, useState } from "react";
 import { useHover } from "./Mouse";
+import store from "../store.js";
 
-export function MenuIcon({ isOpen, setIsOpen }) {
+export default function MenuIcon() {
+  const {menuState, changeMenuState} = store()
   const { setIsHovered } = useHover();
+
   const [hover, setHover] = useState(false);
   const icon = useRef();
 
@@ -19,7 +22,7 @@ export function MenuIcon({ isOpen, setIsOpen }) {
     <svg
       ref={icon}
       id="menu-icon"
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={() => changeMenuState(!menuState)}
       onMouseEnter={() => iconHover()}
       onMouseLeave={() => iconUnHover()}
       xmlns="http://www.w3.org/2000/svg"
@@ -30,19 +33,19 @@ export function MenuIcon({ isOpen, setIsOpen }) {
     >
       <path
         d="M2 2H37"
-        stroke={isOpen ? "#111e2d" : "#e1e1e1"}
+        stroke={menuState ? "#111e2d" : "#e1e1e1"}
         strokeWidth="3"
         strokeLinecap="round"
       />
       <path
         d={hover ? "M2 12H37" : "M2 12H29"}
-        stroke={isOpen ? "#111e2d" : "#e1e1e1"}
+        stroke={menuState ? "#111e2d" : "#e1e1e1"}
         strokeWidth="3"
         strokeLinecap="round"
       />
       <path
         d={hover ? "M2 22H37" : "M2 22H20"}
-        stroke={isOpen ? "#111e2d" : "#e1e1e1"}
+        stroke={menuState ? "#111e2d" : "#e1e1e1"}
         strokeWidth="3"
         strokeLinecap="round"
       />

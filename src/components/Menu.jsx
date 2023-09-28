@@ -3,8 +3,10 @@ import { useHover } from "./Mouse";
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";
+import store from "../store.js";
 
-export function Menu({ isOpen }) {
+export function Menu() {
+  const {menuState, changeMenuState} = store()
   const navigate = useNavigate();
   const menu = useRef();
   const { setIsHovered } = useHover();
@@ -14,7 +16,7 @@ export function Menu({ isOpen }) {
     { label: "Works", route: "works" },
     { label: "Contact", route: "contact" },
   ];
-  if (isOpen) {
+  if (menuState) {
     gsap.to(menu.current, {
       clipPath: "circle(150% at calc(100% - 45px) 45px)",
       ease: "in-out",
@@ -26,6 +28,12 @@ export function Menu({ isOpen }) {
       duration: 0.5,
     });
   }
+
+  const clickHandler = (item) => {
+    navigate(item.route)
+    changeMenuState(false)
+  }
+
 
   return (
     <div ref={menu} id="menu">
@@ -42,7 +50,7 @@ export function Menu({ isOpen }) {
               className={`menu-item ${hover ? "hover" : ""}`}
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
-              onClick={() => navigate(item.route)}
+              onClick={() => clickHandler(item)}
             >
               {item.label}
             </div>

@@ -15,8 +15,8 @@ section {
 
 #menu-icon {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 70px;
   z-index: 4;
   path {
     transition: all 0.3s ease;
@@ -79,6 +79,23 @@ section {
   transition: transform 0.3s ease;
   will-change: transform;
 }
+.subpage-header {
+  width: 100%;
+  padding: 80px 70px;
+  //height: ;
+display: flex;
+  flex-direction: column;
+  .upper {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  .lower {
+    font-size: 18px;
+  }
+}
 #main {
   background-color: #111e2d;
   .title {
@@ -110,6 +127,7 @@ section {
   }
 }
 #about {
+  height: 100%  ;
 }
 // #projects {
 //   .swiper .swiper-slide {

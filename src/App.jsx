@@ -4,17 +4,15 @@ import { useState } from "react";
 import Mouse from "./components/Mouse";
 import { HoverProvider } from "./components/Mouse";
 import { Menu } from "./components/Menu";
-import { MenuIcon } from "./components/MenuIcon";
+import MenuIcon from "./components/MenuIcon";
 
 export default function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <HoverProvider>
       <div id="app">
         <Mouse />
-        <MenuIcon isOpen={isOpen} setIsOpen={setIsOpen} />
-        <Menu isOpen={isOpen} />
+        <MenuIcon />
+        <Menu />
         <Outlet />
       </div>
     </HoverProvider>
