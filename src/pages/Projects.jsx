@@ -1,5 +1,3 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import SubPageHeader from "../components/SubPageHeader.jsx";
 
 export default function Projects() {
