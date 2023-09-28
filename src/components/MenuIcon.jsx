@@ -3,7 +3,7 @@ import { useHover } from "./Mouse";
 import store from "../store.js";
 
 export default function MenuIcon() {
-  const {menuState, changeMenuState} = store()
+  const { menuState, changeMenuState } = store();
   const { setIsHovered } = useHover();
 
   const [hover, setHover] = useState(false);
@@ -33,19 +33,19 @@ export default function MenuIcon() {
     >
       <path
         d="M2 2H37"
-        stroke={menuState ? "#111e2d" : "#e1e1e1"}
+        stroke="#e63946"
         strokeWidth="3"
         strokeLinecap="round"
       />
       <path
         d={hover ? "M2 12H37" : "M2 12H29"}
-        stroke={menuState ? "#111e2d" : "#e1e1e1"}
+        stroke="#e63946"
         strokeWidth="3"
         strokeLinecap="round"
       />
       <path
         d={hover ? "M2 22H37" : "M2 22H20"}
-        stroke={menuState ? "#111e2d" : "#e1e1e1"}
+        stroke="#e63946"
         strokeWidth="3"
         strokeLinecap="round"
       />

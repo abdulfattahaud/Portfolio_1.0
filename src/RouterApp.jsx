@@ -9,7 +9,7 @@ export default function RouterApp() {
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Main />} />
-          <Route path="about" element={<About />} />
+          <Route path="About" element={<About />} />
           {/*<Route path="contact" element={<Contact />} />*/}
           {/*<Route path="*" element={<NoPage />} />*/}
         </Route>

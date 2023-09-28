@@ -1,7 +1,9 @@
 :root {
   --ease: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
+#app {
+  background: white;
+}
 section {
   height: 100vh;
   display: flex;
@@ -53,7 +55,6 @@ section {
         left: 0;
         background-color: #ffffff;
         mix-blend-mode: exclusion;
-        transition: height 0.3s ease;
         will-change: height;
         clip-path: inset(50% 0 50% 0);
         transition:
@@ -71,7 +72,7 @@ section {
   width: 20px;
   height: 20px;
   inset: 50%;
-  background-color: whitesmoke;
+  background-color: #F5F5F5FF;
   border-radius: 50%;
   z-index: 1000;
   user-select: none;
