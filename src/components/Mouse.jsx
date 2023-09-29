@@ -1,11 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  useRef,
-} from "react";
-import gsap from "gsap";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const HoverContext = createContext();
 

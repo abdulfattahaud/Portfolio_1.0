@@ -30,14 +30,10 @@ export default function About() {
           >
             <h2 className="text-3xl mb-2.5">Who I'm</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-              fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-              Gonna make this two columns, text on left and on side particles
-              animating with scroll magna interdum eu. Curabitur pellentesque
-              nibh nibh, at maximus ante fermentum sit amet. Pellentesque
-              commodo lacus at sodales sodales. Quisque sagittis orci ut diam
-              condimentum, vel euismod erat placerat.
+              Hi I’m Abdulfettah, A Frontend / Creative developer located in
+              Istanbul Türkiye, studying Computer Programming at Istanbul
+              university . My first experience with programming was when I was a
+              high school student, started with C# and continues with Js/Ts
             </p>
           </div>
           <div
@@ -47,31 +43,23 @@ export default function About() {
           >
             <h2 className="text-3xl mb-2.5">What I do</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-              fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-              vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum
-              auctor ornare leo, non suscipit magna interdum eu. Curabitur
-              pellentesque nibh nibh, at maximus ante fermentum sit amet.
-              Pellentesque commodo lacus at sodales sodales. Quisque sagittis
-              orci ut diam condimentum, vel euismod erat placerat.
+              In the realm of frontend development, I'm well-versed in a range
+              of technologies that empower me to craft visually appealing and
+              highly functional user interfaces. My toolkit includes JavaScript,
+              TypeScript, React, SCSS, Bootstrap, and Tailwind, enabling me to
+              build dynamic and responsive websites with a keen eye for design
+              and user experience.
             </p>
-          </div>
-          <div
-            className="block mb-10"
-            ref={(el) => hoverAbleEl.current.push(el)}
-            data-mouse-scale={5}
-          >
-            <h2 className="text-3xl mb-2.5">What I do</h2>
+            <br />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-              fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-              vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum
-              auctor ornare leo, non suscipit magna interdum eu. Curabitur
-              pellentesque nibh nibh, at maximus ante fermentum sit amet.
-              Pellentesque commodo lacus at sodales sodales. Quisque sagittis
-              orci ut diam condimentum, vel euismod erat placerat.
+              But what truly sets me apart is my passion for creative
+              programming. I delve into the world of Web Graphics Library
+              (WebGL), where I create immersive and visually stunning
+              experiences. Leveraging the power of libraries like Three.js and
+              React Three Fiber, I breathe life into digital landscapes and
+              interactive 3D visuals. I'm not afraid to venture into the realm
+              of GLSL (OpenGL Shading Language) to craft custom shaders and
+              effects that make my projects truly unique.
             </p>
           </div>
         </div>
