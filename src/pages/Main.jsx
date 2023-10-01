@@ -5,7 +5,6 @@ import { useHover } from "../components/Mouse";
 
 export default function Main() {
   const titleRef = useRef();
-  const scrollRef = useRef();
   const secondTitleRef = useRef();
   const { setIsHovered } = useHover();
 
@@ -25,7 +24,7 @@ export default function Main() {
         stagger: 0.05,
         top: 0,
       },
-      "+=0.5"
+      "+=0.5",
     ).fromTo(
       secondTitleRef.current.children,
       {
@@ -38,7 +37,7 @@ export default function Main() {
         stagger: 0.05,
         top: 0,
       },
-      "-=1.2"
+      "-=1.2",
     );
   }, []);
   return (
@@ -58,9 +57,6 @@ export default function Main() {
             <span key={i}>{e}</span>
           ))}
         </h2>
-      </div>
-      <div ref={scrollRef} className="scroll">
-        <img src="../../svg/scroll-down.svg" />
       </div>
     </section>
   );
