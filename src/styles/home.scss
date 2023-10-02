@@ -95,7 +95,6 @@ section {
 .subpage-header {
   width: 100%;
   padding-top: 80px;
-  margin-bottom: 50px ;
   display: flex;
   flex-direction: column;
   .upper {
@@ -145,7 +144,29 @@ section {
   }
 }
 #about {
-  height: 100%;
+  height: calc(100vh - 200px);
+  overflow: hidden;
+  .col-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  .text-wrapper {
+    .block-wrapper {
+      height: calc(100vh - 215px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+    .canvas-wrapper {
+      canvas {
+        position: fixed;
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+  }
 }
 #projects {
   .project {

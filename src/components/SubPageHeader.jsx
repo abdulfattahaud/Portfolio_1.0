@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useHover } from "./Mouse.jsx";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function SubPageHeader() {
   const { pathname } = useLocation();
@@ -20,7 +20,12 @@ export default function SubPageHeader() {
   }, []);
 
   return (
-    <div className="subpage-header md:mx-auto md:container px-8">
+    <div
+      className="subpage-header md:mx-auto md:container px-8"
+      style={{
+        marginBottom: pathname === "/about" ? "0" : "50px",
+      }}
+    >
       <div className="upper">
         <span
           ref={(el) => hoverAbleEl.current.push(el)}
