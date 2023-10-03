@@ -9,13 +9,29 @@ export default function About() {
 
   useEffect(() => {
     if (hoverAbleEl.current) {
+      console.log("test");
       hoverAbleEl.current.forEach((el) => {
-        el.addEventListener("mouseover", () =>
-          setIsHovered(el.dataset.mouseScale),
-        );
-        el.addEventListener("mouseout", () => setIsHovered(1));
+        el.addEventListener("mouseover", () => {
+          // this cause a bug for the canvas
+          // setIsHovered(el.dataset.mouseScale);
+        });
+        el.addEventListener("mouseout", () => {
+          // setIsHovered(1);
+        });
       });
     }
+    return () => {
+      if (hoverAbleEl.current) {
+        hoverAbleEl.current.forEach((el) => {
+          el.removeEventListener("mouseover", () => {
+            setIsHovered(el.dataset.mouseScale);
+          });
+          el.removeEventListener("mouseout", () => {
+            setIsHovered(1);
+          });
+        });
+      }
+    };
   }, []);
 
   return (
@@ -31,7 +47,7 @@ export default function About() {
             >
               <h2 className="text-3xl mb-2.5">Who I'm</h2>
               <p>
-                Hi I’m Abdulfettah, A Frontend / Creative developer located in
+                Hi I’m Abdelfattah, A Frontend / Creative developer located in
                 Istanbul Türkiye, studying Computer Programming at Istanbul
                 university . My first experience with programming was when I was
                 a high school student, started with C# and continues with Js/Ts

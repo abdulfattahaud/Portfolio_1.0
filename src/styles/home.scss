@@ -162,8 +162,8 @@ section {
     .canvas-wrapper {
       canvas {
         position: fixed;
-        pointer-events: none;
-        user-select: none;
+        //pointer-events: none;
+        //user-select: none;
       }
     }
   }

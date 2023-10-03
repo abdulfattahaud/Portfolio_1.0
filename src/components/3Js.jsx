@@ -7,7 +7,7 @@ uniform float progress;
 varying vec2 vUv;
 void main(){
   vUv = uv;
-  vec3 finalPos = mix(position, position2, progress);
+  vec3 finalPos = mix(position, position2, sin(progress) * 2.);  
   vec4 mvPosition = modelViewMatrix * vec4( finalPos, 1.0 );
   gl_PointSize =  1.5;
   gl_Position = projectionMatrix * mvPosition;
@@ -54,20 +54,20 @@ function getModelData(shape) {
 const normalize = (val, max, min) => (val - min) / (max - min);
 function ModalPoints() {
   const material = useRef();
-  const [prog, setProg] = useState(0);
+  // const [prog, setProg] = useState(0);
+  let prog = 0;
   const { data } = getModelData(new THREE.BoxGeometry(5, 5, 5, 50, 50, 50));
   const data2 = getModelData(new THREE.SphereGeometry(3, 64, 32)).data;
 
-  useFrame(() => {
+  useFrame(({ clock }) => {
     if (material.current) {
       material.current.uniforms.progress.value = prog;
     }
-    // material.current.needsUpdate = true;
   });
 
   useEffect(() => {
     document.querySelector(".col-wrapper").addEventListener("scroll", (e) => {
-      setProg(normalize(e.target.scrollTop, e.target.offsetHeight, 0));
+      prog = normalize(e.target.scrollTop, e.target.offsetHeight, 0);
     });
   }, []);
 
@@ -92,7 +92,7 @@ function ModalPoints() {
         vertexShader={vertex}
         fragmentShader={fragment}
         uniforms={{
-          progress: { value: 0.2 },
+          progress: { value: 0 },
         }}
       />
     </points>
