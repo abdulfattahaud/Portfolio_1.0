@@ -49,35 +49,37 @@ export default function Projects() {
                 </svg>
               </span>
             </div>
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="projects-table__content"
-                onMouseEnter={() => setIsHovered(0)}
-                onMouseLeave={() => setIsHovered(1)}
-              >
-                <span className="projects-table__content__title">
-                  {project.title}
-                </span>
-                <span className="projects-table__content__tags">
-                  {project.tags.map((tag, i) => (
-                    <span
-                      key="i"
-                      className="tag"
-                      style={{ backgroundColor: tag.color }}
-                    >
-                      {tag.label}
-                    </span>
-                  ))}
-                </span>
-                <span className="projects-table__content__github">
-                  <a href={project.github}>{project.github}</a>
-                </span>
-                <span className="projects-table__content__live">
-                  <a href={project.live}>{project.live}</a>
-                </span>
-              </div>
-            ))}
+            <div className="projects-table__content-wrapper">
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className="projects-table__content"
+                  onMouseEnter={() => setIsHovered(0)}
+                  onMouseLeave={() => setIsHovered(1)}
+                >
+                  <span className="projects-table__content__title">
+                    {project.title}
+                  </span>
+                  <span className="projects-table__content__tags">
+                    {project.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="tag"
+                        style={{ backgroundColor: tag.color }}
+                      >
+                        {tag.label}
+                      </span>
+                    ))}
+                  </span>
+                  <span className="projects-table__content__github">
+                    <a href={project.github}>{project.github}</a>
+                  </span>
+                  <span className="projects-table__content__live">
+                    <a href={project.live}>{project.live}</a>
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
