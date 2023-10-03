@@ -7,7 +7,7 @@ uniform float progress;
 varying vec2 vUv;
 void main(){
   vUv = uv;
-  vec3 finalPos = mix(position, position2, sin(progress) * 2.);  
+  vec3 finalPos = mix(position, position2, progress);  
   vec4 mvPosition = modelViewMatrix * vec4( finalPos, 1.0 );
   gl_PointSize =  1.5;
   gl_Position = projectionMatrix * mvPosition;
@@ -24,6 +24,7 @@ void main(){
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
+import { OrbitControls } from "@react-three/drei";
 
 const size = 128;
 const number = size * size;
@@ -67,12 +68,13 @@ function ModalPoints() {
 
   useEffect(() => {
     document.querySelector(".col-wrapper").addEventListener("scroll", (e) => {
-      prog = normalize(e.target.scrollTop, e.target.offsetHeight, 0);
+      prog = normalize(e.target.scrollTop, e.target.offsetHeight - 30, 0);
     });
   }, []);
 
   return (
     <points>
+      <OrbitControls enableZoom={false} enablePan={false} />
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
