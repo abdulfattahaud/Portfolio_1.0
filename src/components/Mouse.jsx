@@ -40,7 +40,11 @@ export default function Mouse() {
     };
 
     const handleMouseMove = (e) => {
-      // Update mouse position when the mouse or touch moves
+      // get same target when touchmove
+      if (e.type === "touchmove") {
+        e.clientX = e.touches[0].clientX;
+        e.clientY = e.touches[0].clientY;
+      }
       updateMousePosition(e);
     };
 

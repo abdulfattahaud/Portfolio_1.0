@@ -15,6 +15,8 @@ export default function Projects() {
               className="project mb-5"
               onMouseEnter={() => setIsHovered(4)}
               onMouseLeave={() => setIsHovered(1)}
+              onTouchStart={() => setIsHovered(4)}
+              onTouchEnd={() => setIsHovered(1)}
             >
               <div className="labels">
                 <h1 className="text-2xl">{project.name}</h1>

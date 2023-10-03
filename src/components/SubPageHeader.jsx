@@ -14,7 +14,11 @@ export default function SubPageHeader() {
         el.addEventListener("mouseover", () =>
           setIsHovered(el.dataset.mouseScale),
         );
+        el.addEventListener("touchstart", () => {
+          setIsHovered(el.dataset.mouseScale);
+        });
         el.addEventListener("mouseout", () => setIsHovered(1));
+        el.addEventListener("touchend", () => setIsHovered(1));
       });
     }
   }, []);

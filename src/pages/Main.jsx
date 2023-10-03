@@ -46,6 +46,8 @@ export default function Main() {
         className="title"
         onMouseEnter={() => setIsHovered(10)}
         onMouseLeave={() => setIsHovered(1)}
+        onTouchStart={() => setIsHovered(10)}
+        onTouchEnd={() => setIsHovered(1)}
       >
         <h1 ref={titleRef}>
           {[...title].map((e, i) => (

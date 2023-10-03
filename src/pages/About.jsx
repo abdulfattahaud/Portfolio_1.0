@@ -15,7 +15,13 @@ export default function About() {
           // this cause a bug for the canvas
           // setIsHovered(el.dataset.mouseScale);
         });
+        el.addEventListener("touchstart", () => {
+          // setIsHovered(el.dataset.mouseScale);
+        });
         el.addEventListener("mouseout", () => {
+          // setIsHovered(1);
+        });
+        el.addEventListener("touchend", () => {
           // setIsHovered(1);
         });
       });

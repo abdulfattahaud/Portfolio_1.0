@@ -25,6 +25,8 @@ export default function MenuIcon() {
       onClick={() => changeMenuState(!menuState)}
       onMouseEnter={() => iconHover()}
       onMouseLeave={() => iconUnHover()}
+      onTouchStart={() => iconHover()}
+      onTouchEnd={() => iconUnHover()}
       xmlns="http://www.w3.org/2000/svg"
       width="50"
       height="50"
