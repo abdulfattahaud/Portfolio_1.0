@@ -23,7 +23,7 @@ void main(){
 `;
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { OrbitControls } from "@react-three/drei";
 
 const size = 128;
@@ -60,7 +60,7 @@ function ModalPoints() {
   const { data } = getModelData(new THREE.BoxGeometry(5, 5, 5, 50, 50, 50));
   const data2 = getModelData(new THREE.SphereGeometry(3, 64, 32)).data;
 
-  useFrame(({ clock }) => {
+  useFrame(() => {
     if (material.current) {
       material.current.uniforms.progress.value = prog;
     }

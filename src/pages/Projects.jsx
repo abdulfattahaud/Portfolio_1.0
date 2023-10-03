@@ -51,22 +51,30 @@ export default function Projects() {
             </div>
             {projects.map((project) => (
               <div
+                key={project.id}
                 className="projects-table__content"
                 onMouseEnter={() => setIsHovered(0)}
                 onMouseLeave={() => setIsHovered(1)}
               >
                 <span className="projects-table__content__title">
-                  Project 1
+                  {project.title}
                 </span>
                 <span className="projects-table__content__tags">
-                  <span className="tag">Html</span>
-                  <span className="tag">Css</span>
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key="i"
+                      className="tag"
+                      style={{ backgroundColor: tag.color }}
+                    >
+                      {tag.label}
+                    </span>
+                  ))}
                 </span>
                 <span className="projects-table__content__github">
-                  <a href="">github.com/fettahaud/project1</a>
+                  <a href={project.github}>{project.github}</a>
                 </span>
                 <span className="projects-table__content__live">
-                  <a href="">project1.com</a>
+                  <a href={project.live}>{project.live}</a>
                 </span>
               </div>
             ))}
