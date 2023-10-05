@@ -281,10 +281,12 @@ section {
         display: block;
         overflow: scroll;
         height: 200px;
+        scroll-snap-type: y mandatory;
         .projects-table__content {
           flex-direction: column;
           padding-left: 0;
           border-bottom: 0;
+          scroll-snap-align: start;
           > span {
             border-right: 0 !important;
             padding: 10px 0 10px 20px;
