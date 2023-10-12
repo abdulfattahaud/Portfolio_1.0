@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+:root {
+  --ease: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#app {
+  background: white;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.buf {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: 0;
+  outline: 0;
+  max-width: 210px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  &-primary {
+    background: #CC3737;
+  }
+  &-black {
+    background: #1E1E1E;
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .buf {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .buf {
+    padding: 10px 15px;
+  }
+}
