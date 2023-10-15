@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 
 *,
 *::before,
@@ -26,6 +26,12 @@
   display: none;
 }
 
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
 .buf {
   padding: 15px 20px;
   display: flex;
@@ -40,10 +46,10 @@
   font-size: 18px;
   font-weight: 500;
   &-primary {
-    background: #CC3737;
+    background: #cc3737;
   }
   &-black {
-    background: #1E1E1E;
+    background: #1e1e1e;
   }
 }
 a {
