@@ -14,9 +14,6 @@ export default function Header() {
       }
     };
     window.addEventListener("scroll", scroll);
-    return () => {
-      window.removeEventListener("scroll", scroll);
-    };
   }, []);
   return (
     <header ref={header} className="header">
