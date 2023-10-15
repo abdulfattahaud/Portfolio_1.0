@@ -5,29 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e034adb-f314-4b3e-af58-fa40f6637aed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/Figma.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Git.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/GitHub.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Jira.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bootstrap.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/gsap.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/html.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/nextjs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/r3f.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/react.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tailwind.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ts.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/assets/Images.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/assets/projects.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/globals.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -71,7 +58,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Fettah\\AppData\\Roaming\\npm\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\Fettah\\OneDrive\\Desktop\\Code\\Portfolio_1.0\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -86,7 +73,8 @@
       <updated>1697137686884</updated>
       <workItem from="1697137688857" duration="339000" />
       <workItem from="1697360451148" duration="364000" />
-      <workItem from="1697360829236" duration="6265000" />
+      <workItem from="1697360829236" duration="7632000" />
+      <workItem from="1697378978061" duration="3498000" />
     </task>
     <servers />
   </component>

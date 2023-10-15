@@ -25,6 +25,10 @@
 ::-webkit-scrollbar {
   display: none;
 }
+body,
+html {
+  scroll-behavior: smooth;
+}
 
 .section-title {
   font-size: 36px;

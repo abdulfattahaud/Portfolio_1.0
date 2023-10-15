@@ -4,29 +4,13 @@ import "./styles/page.scss";
 import Link from "next/link";
 import projectsArr from "@/app/assets/projects";
 import { devImages, toolImages } from "./assets/Images";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
     <main>
-      <header className="header">
-        <span>FETTAH</span>
-        <div>
-          <ul>
-            <li className="active">
-              <Link href={"/"}>Home</Link>
-            </li>
-            <li>
-              <Link href="#about">About</Link>
-            </li>
-            <li>
-              <Link href="#projects">Projects</Link>
-            </li>
-            <li>
-              <Link href="#contact">Contact</Link>
-            </li>
-          </ul>
-        </div>
-      </header>
+      <Header />
       <section className="hero" id="main">
         <h1 className="title">
           Hi there,
@@ -40,14 +24,14 @@ export default function Home() {
 
         <div className="actions">
           <div className="buf buf-primary">
-            <Link href="#projects">See what I do</Link>
+            <Link href={"#projects"}>See what I do</Link>
           </div>
           <div className="buf buf-black">
             <Link href="">Hire me</Link>
           </div>
         </div>
       </section>
-      <section id="projects" className="mx-auto container px-8 my-20">
+      <section id="projects" className="mx-auto container px-8">
         <h1 className="section-title">Projects</h1>
         <div className="projects-table">
           <div className="projects-table__title">
@@ -117,7 +101,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="about" className="mx-auto container px-8 my-20">
+      <section id="about" className="mx-auto container px-8 ">
         <h1 className="section-title">About</h1>
         <div className="block me">
           <h2>Who I&apos;m</h2>
@@ -176,6 +160,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
