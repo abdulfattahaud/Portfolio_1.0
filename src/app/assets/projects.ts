@@ -124,6 +124,28 @@ const projectsArr: Project[] = [
     github: "https://github.com/FettahAud/rapier-test",
     live: "https://rapier-test.vercel.app/",
   },
+  {
+    id: 8,
+    title: "Animating triangles",
+    tags: [
+      { label: "R3F", color: getRandomColor() },
+      { label: "Shaders", color: getRandomColor() },
+      { label: "WebGl", color: getRandomColor() },
+    ],
+    github: "https://github.com/FettahAud/Animating-Triangles",
+    live: "https://animating-triangles.vercel.app/",
+  },
+  {
+    id: 9,
+    title: "Slider Animation",
+    tags: [
+      { label: "Js", color: getRandomColor() },
+      { label: "Scss", color: getRandomColor() },
+      { label: "Gsap", color: getRandomColor() },
+    ],
+    github: "https://github.com/FettahAud/Codrop-Clones/tree/main/SlideShow",
+    live: "https://fettahaud.github.io/Codrop-Clones/SlideShow/src/index.html",
+  },
 ];
 
 export default projectsArr;

@@ -6,6 +6,11 @@ import { useEffect, useRef } from "react";
 export default function Header() {
   const header = useRef<HTMLHeadingElement | null>(null);
   useEffect(() => {
+    if (window.scrollY > 0) {
+      header.current?.classList.add("floating");
+    } else {
+      header.current?.classList.remove("floating");
+    }
     const scroll = () => {
       if (window.scrollY > 0) {
         header.current?.classList.add("floating");
