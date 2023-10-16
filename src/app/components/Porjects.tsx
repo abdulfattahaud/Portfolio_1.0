@@ -6,7 +6,7 @@ export default function Projects() {
       <h1 className="section-title">Projects</h1>
       <div className="projects-table">
         <div className="projects-table__title">
-          <span>Website</span>
+          <span>Name</span>
           <span>Tags</span>
           <span>
             <svg
