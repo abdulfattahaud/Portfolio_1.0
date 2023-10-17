@@ -146,6 +146,17 @@ const projectsArr: Project[] = [
     github: "https://github.com/FettahAud/Codrop-Clones/tree/main/SlideShow",
     live: "https://fettahaud.github.io/Codrop-Clones/SlideShow/src/index.html",
   },
+  {
+    id: 10,
+    title: "Can Yilmaz Portfolio",
+    tags: [
+      { label: "React", color: getRandomColor() },
+      { label: "Scss", color: getRandomColor() },
+      { label: "Gsap", color: getRandomColor() },
+    ],
+    github: "https://github.com/FettahAud/Can-portfolio",
+    live: "https://can-portfolio-plum.vercel.app/",
+  },
 ];
 
 export default projectsArr;

@@ -6,7 +6,7 @@ export default function Main() {
       <h1 className="title">
         Hi there,
         <br />
-        I’m Abdelfettah,
+        I’m AbdelFettah,
         <br />
         a Frontend / Creative
         <br />
@@ -18,7 +18,7 @@ export default function Main() {
           <Link href={"#projects"}>See what I do</Link>
         </div>
         <div className="buf buf-black">
-          <Link href="">Hire me</Link>
+          <Link href="mailto:fettahaud@gmail.com">Hire me</Link>
         </div>
       </div>
     </section>
