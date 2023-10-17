@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e034adb-f314-4b3e-af58-fa40f6637aed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Fettah/OneDrive/Desktop/Code/can",
+    "last_opened_file_path": "C:/Users/Fettah/OneDrive/Desktop/Code/porfolio-3d",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,6 +70,8 @@
       <workItem from="1697378978061" duration="9290000" />
       <workItem from="1697457482235" duration="733000" />
       <workItem from="1697461058270" duration="2116000" />
+      <workItem from="1697540707849" duration="392000" />
+      <workItem from="1697541262367" duration="14000" />
     </task>
     <servers />
   </component>

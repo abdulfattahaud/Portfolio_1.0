@@ -1,4 +1,5 @@
 import projectsArr from "@/app/assets/projects";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -62,10 +63,14 @@ export default function Projects() {
                 ))}
               </span>
               <span className="projects-table__content__github">
-                <a href={project.github}>{project.github}</a>
+                <Link target="_blank" href={project.github}>
+                  {project.github}
+                </Link>
               </span>
               <span className="projects-table__content__live">
-                <a href={project.live}>{project.live}</a>
+                <Link target="_blank" href={project.live}>
+                  {project.live}
+                </Link>
               </span>
             </div>
           ))}
