@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="mx-auto container px-8 ">
-      <h1 className="section-title">About</h1>
+    <section id="about" className="mx-auto container px-8 md:px-0 ">
+      {/* <h1 className="section-title">About</h1> */}
       <div className="block me">
         <h2>Who I&apos;m</h2>
         <p>
@@ -28,7 +28,7 @@ export default function About() {
           {/*  alsoe mention 3js and react three fiber*/}
         </p>
       </div>
-      <div className="block stack">
+      {/* <div className="block stack">
         <h2>My Tech Stack</h2>
         <div className="dev">
           <h3>Development</h3>
@@ -60,7 +60,7 @@ export default function About() {
             ))}
           </ul>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

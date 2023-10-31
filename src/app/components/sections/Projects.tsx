@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <section id="projects" className="mx-auto container px-8">
-      <h1 className="section-title">Projects</h1>
+    <section id="projects" className="mx-auto container md:px-0 px-8">
+      <h1 className="section-title">Recent Projects</h1>
       <div className="projects-table">
         <div className="projects-table__title">
           <span>Name</span>
