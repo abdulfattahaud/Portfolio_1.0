@@ -79,8 +79,17 @@
 #footer {
   background: var(--secondary-color);
   margin-top: 150px;
-  main {
-    padding: 30px 50px;
+  .container {
+    // padding: 30px 50px;
+    padding-top: 70px;  
+    @media screen and (max-width: 768px) {
+      align-items: center;
+      
+    }
+  }
+  .footer {
+    margin-top: 110px;
+    padding: 0 50px 35px;
   }
 }
 

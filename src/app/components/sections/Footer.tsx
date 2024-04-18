@@ -14,9 +14,8 @@ export default function Footer() {
   } ${formattedOffset}`;
   return (
     <div id="footer">
-      <main className=" flex flex-col px-5">
-        <section className="self-stretch flex flex-col ml-2.5 mr-3 mt-20 mb-9 max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
-          <div className="self-center w-[829px] max-w-full -ml-16">
+      <main className=" flex flex-col">
+        <section className="container mx-auto flex flex-col">
             <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
               <div className="flex flex-col items-stretch w-[79%] max-md:w-full max-md:ml-0">
                 <div className="flex grow flex-col max-md:max-w-full max-md:mt-10">
@@ -48,10 +47,9 @@ export default function Footer() {
                   </div>
                 </Magnetic>
               </div>
-            </div>
           </div>
         </section>
-        <section className="self-center flex w-full max-w-[1218px] items-start justify-between gap-5 mt-28 max-md:max-w-full max-md:flex-wrap max-md:justify-center max-md:mt-10">
+        <section className="self-center flex w-full max-w-[1218px] items-start justify-between gap-5 max-md:max-w-full max-md:flex-wrap max-md:justify-center footer">
           <div className="flex flex-row gap-[45px] self-start">
             <div className="flex-col">
               <div className="text-neutral-300 text-opacity-70 text-base font-medium uppercase self-start">

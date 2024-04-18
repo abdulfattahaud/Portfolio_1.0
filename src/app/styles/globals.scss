@@ -75,6 +75,13 @@ a {
   text-decoration: none;
 }
 
+.container {
+  @media screen and (min-width: 992px) {
+    margin: 0 160px;
+    width: unset;
+  }
+}
+
 .magnetic {
   position: relative;
   // transition: 0.3s all;

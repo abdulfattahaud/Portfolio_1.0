@@ -23,9 +23,16 @@ export default function About() {
           creating beautiful user interfaces,
           <br /> I’m also interested in 3D design and animation, I’m using
           Blender for 3D design and animation,
-          <br /> I’m also interested in game development, I’m using Unity for
-          game development.
-          {/*  alsoe mention 3js and react three fiber*/}
+        </p>
+      </div>
+      <div className="block skills">
+        <h2>My Skills</h2>
+        <p>
+          My main focus is on Frontend Development, and I have experience with
+          various technologies such as HTML, CSS, JavaScript, TypeScript, React,
+          Next.js, and more. I'm also interested in 3D design and animation, and
+          I use Blender for that. Additionally, I have experience with 3D
+          libraries such as Three.js and React Three Fiber.
         </p>
       </div>
       {/* <div className="block stack">
