@@ -78,7 +78,7 @@ export default function Footer() {
               <Magnetic>
                 <a
                   target="_blank"
-                  href="https://twitter.com"
+                  href="https://twitter.com/Fettah_Aud"
                   className="text-zinc-100 text-base font-medium self-start"
                 >
                   Twitter
@@ -87,7 +87,7 @@ export default function Footer() {
               <Magnetic>
                 <a
                   target="_blank"
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/fettahaud/"
                   className="text-zinc-100 text-base font-medium self-start"
                 >
                   Instagram
@@ -96,7 +96,7 @@ export default function Footer() {
               <Magnetic>
                 <a
                   target="_blank"
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/fettah-aud/"
                   className="text-zinc-100 text-base font-medium self-start"
                 >
                   LinkedIn
