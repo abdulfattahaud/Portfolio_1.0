@@ -18,10 +18,10 @@ export default function About() {
       <div className="block do">
         <h2>What I do</h2>
         <p>
-          I’m a Frontend / Creative developer, I love to create beautiful
-          websites and web apps, I’m also interested in UI/UX design and
+          I&apos;m a Frontend / Creative developer, I love to create beautiful
+          websites and web apps, I&apos;m also interested in UI/UX design and
           creating beautiful user interfaces,
-          <br /> I’m also interested in 3D design and animation, I’m using
+          <br /> I&apos;m also interested in 3D design and animation, I’m using
           Blender for 3D design and animation,
         </p>
       </div>
@@ -30,9 +30,9 @@ export default function About() {
         <p>
           My main focus is on Frontend Development, and I have experience with
           various technologies such as HTML, CSS, JavaScript, TypeScript, React,
-          Next.js, and more. I'm also interested in 3D design and animation, and
-          I use Blender for that. Additionally, I have experience with 3D
-          libraries such as Three.js and React Three Fiber.
+          Next.js, and more. I&apos;m also interested in 3D design and
+          animation, and I use Blender for that. Additionally, I have experience
+          with 3D libraries such as Three.js and React Three Fiber.
         </p>
       </div>
       {/* <div className="block stack">
