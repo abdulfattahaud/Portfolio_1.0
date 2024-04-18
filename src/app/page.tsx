@@ -9,12 +9,13 @@ import Lenify from "./components/Lenis";
 export default function Home() {
   return (
     <main>
-      <Lenify />
-      <Header />
-      <Main />
-      <Projects />
-      <About />
-      <Footer />
+      <Lenify>
+        <Header />
+        <Main />
+        <Projects />
+        <About />
+        <Footer />
+      </Lenify>
     </main>
   );
 }

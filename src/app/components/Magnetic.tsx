@@ -30,10 +30,10 @@ export default function Magnetic({ children }: { children: React.ReactNode }) {
       ease: "elastic.out(1, .2",
     });
 
-    node!.addEventListener("mousemove", (e) => mouseMove(e));
+    node!.addEventListener("mousemove", (e: any) => mouseMove(e));
     node!.addEventListener("mouseleave", mouseLeave);
     return () => {
-      node!.removeEventListener("mousemove", (e) => mouseMove(e));
+      node!.removeEventListener("mousemove", (e: any) => mouseMove(e));
       node!.removeEventListener("mouseleave", mouseLeave);
     };
   }, [ref]);
