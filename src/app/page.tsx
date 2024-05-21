@@ -12,9 +12,9 @@ export default function Home() {
       <Lenify>
         <Header />
         <Main />
-        <Projects />
+        {/* <Projects />
         <About />
-        <Footer />
+        <Footer /> */}
       </Lenify>
     </main>
   );

@@ -3,13 +3,22 @@
 import Link from "next/link";
 import Magnetic from "../Magnetic";
 import { useLenis } from "@studio-freight/react-lenis";
+import { ALetter, ELetter, FLetter, HLetter, TLetter } from "../ui/HeroLetters";
 
 export default function Main() {
   const lenis = useLenis();
   return (
     <>
       <section className="hero" id="main">
-        <h1 className="title">
+        <div className="letters">
+          <FLetter />
+          <ELetter />
+          <TLetter />
+          <TLetter />
+          <ALetter />
+          <HLetter />
+        </div>
+        {/* <h1 className="title">
           Hi there,
           <br />
           I’m Abd Al-Fattah,
@@ -33,7 +42,7 @@ export default function Main() {
               <Link href="mailto:fettahaud@gmail.com">Hire me</Link>
             </div>
           </Magnetic>
-        </div>
+        </div> */}
       </section>
     </>
   );

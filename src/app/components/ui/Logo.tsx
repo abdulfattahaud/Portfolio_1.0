@@ -1,0 +1,25 @@
+export default function Logo() {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="32" height="32" rx="16" fill="white" />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M14.3139 9.89014H5.94922V12.0239H8.4751V12.0243H14.3139V9.89014ZM8.4751 15.0879V15.0884H5.94922V22.1101H8.46207V17.1877H14.0041V15.0879H8.4751Z"
+        fill="black"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M19.735 9.89014L14.3135 21.938H16.6198L17.8128 19.1498H17.8161L18.5659 17.3943H18.564L20.8202 12.1216L23.083 17.3904H23.0843L23.086 17.3943L23.8404 19.1498L23.8411 19.1514H23.8393L25.0361 21.938H27.3768L21.9381 9.89014H19.735Z"
+        fill="black"
+      />
+    </svg>
+  );
+}
