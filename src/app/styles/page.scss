@@ -22,11 +22,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 184px;
+    width: 186px;
     overflow: hidden;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) width;
     &:hover {
-      width: 215px;
+      width: 217px;
       span.text span {
         transform: translateX(-55px);
       }
@@ -81,10 +81,9 @@
   margin-top: 150px;
   .container {
     // padding: 30px 50px;
-    padding-top: 70px;  
+    padding-top: 70px;
     @media screen and (max-width: 768px) {
       align-items: center;
-      
     }
   }
   .footer {
