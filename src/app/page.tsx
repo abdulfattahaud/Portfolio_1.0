@@ -5,6 +5,7 @@ import Main from "@/app/components/sections/Main";
 import About from "@/app/components/sections/About";
 import Projects from "@/app/components/sections/Projects";
 import Lenify from "./components/Lenis";
+import Peek from "./components/sections/Peek";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Lenify>
         <Header />
         <Main />
+        <Peek />
         {/* <Projects />
         <About />
         <Footer /> */}
