@@ -1,5 +1,6 @@
 "use client";
-import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+// @ts-ignore
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 import {
