@@ -20,10 +20,10 @@ import {
 
 export default function Stack() {
   const stack = [
-    CSSL,
     HTML,
-    JS,
+    CSSL,
     SASS,
+    JS,
     TS,
     React,
     NextJS,

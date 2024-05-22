@@ -187,6 +187,9 @@
     max-width: unset;
     .splide__slide {
       width: 80px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .stack-logo {
       height: 80px;
