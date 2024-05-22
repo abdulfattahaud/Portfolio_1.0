@@ -14,6 +14,7 @@ import {
   R3F,
   Figma,
   GSAP,
+  Tailwind,
 } from "../ui/StackLogos";
 
 export default function Stack() {
@@ -25,6 +26,7 @@ export default function Stack() {
     TS,
     React,
     NextJS,
+    Tailwind,
     ThreeJS,
     R3F,
     Figma,
