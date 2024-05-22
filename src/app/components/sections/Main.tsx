@@ -19,6 +19,7 @@ export default function Main() {
       animation: tl,
       pin: true,
       pinSpacing: false,
+      // once: true,
     });
     // take odd
     tl.from(
@@ -69,13 +70,6 @@ export default function Main() {
           ease: "power2.out",
         },
         0
-      )
-      .to(
-        ".hero",
-        {
-          opacity: 0,
-        },
-        0.5
       );
     // take even
   });

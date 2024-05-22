@@ -115,11 +115,13 @@
 
 .peek {
   padding: 130px var(--margin);
-  margin-bottom: 200px;
   background-color: #000;
   // border-top: 1px dashed hsla(0, 0%, 100%, 0.4);
   // border-bottom: 1px dashed hsla(0, 0%, 100%, 0.4);
   position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
   .content {
     text-align: center;
     display: flex;
@@ -158,6 +160,37 @@
   }
   &::before {
     bottom: 0;
+  }
+}
+.stack {
+  padding: 130px var(--margin);
+  background-color: black;
+  position: relative;
+  z-index: 1;
+  article {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 9%;
+    }
+  }
+  .logos-wrapper {
+    display: flex;
+    gap: 60px;
+    width: max-content;
+    max-width: unset;
+    .splide__slide {
+      width: 80px !important;
+    }
+    svg {
+      height: 80px;
+    }
   }
 }
 
