@@ -15,7 +15,7 @@ export default function Main() {
       start: "top 70px",
       end: "100% 70px",
       scrub: 1,
-      markers: true,
+      markers: false,
       animation: tl,
       pin: true,
       pinSpacing: false,
