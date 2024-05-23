@@ -18,6 +18,7 @@ import {
   Tailwind,
   git,
   github,
+  Vite,
 } from "../ui/StackLogos";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -38,6 +39,7 @@ export default function Stack() {
     GSAP,
     git,
     github,
+    Vite,
   ];
   useGSAP(() => {
     ScrollTrigger.create({
