@@ -3,7 +3,7 @@
 import { useRef } from "react";
 // import Magnetic from "../Magnetic";
 import { useLenis } from "@studio-freight/react-lenis";
-import Logo from "../ui/Logo";
+import { Logo } from "../ui/Logo";
 
 export default function Header() {
   const header = useRef<HTMLHeadingElement | null>(null);

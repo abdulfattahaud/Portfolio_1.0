@@ -81,22 +81,6 @@
   }
 }
 
-#footer {
-  background: var(--secondary-color);
-  margin-top: 150px;
-  .container {
-    // padding: 30px 50px;
-    padding-top: 70px;
-    @media screen and (max-width: 768px) {
-      align-items: center;
-    }
-  }
-  .footer {
-    margin-top: 110px;
-    padding-bottom: 35px;
-  }
-}
-
 .hero {
   height: 100vh;
   width: 100%;
@@ -117,8 +101,6 @@
 .peek {
   padding: var(--margin-y) var(--margin-x);
   background-color: #000;
-  // border-top: 1px dashed hsla(0, 0%, 100%, 0.4);
-  // border-bottom: 1px dashed hsla(0, 0%, 100%, 0.4);
   position: relative;
   z-index: 1;
   width: 100%;
@@ -312,6 +294,48 @@
   }
 }
 
+#footer {
+  background-color: white;
+  padding: 40px var(--margin-x);
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  border-top: 1px solid hsla(0, 0%, 0%, 0.6);
+  .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    .social-links {
+      display: flex;
+      gap: 10px;
+      .social-link {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  .lower {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
+    .copy {
+      color: rgba(10, 9, 12, 0.6);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}
 // #projects {
 //   padding-top: 100px;
 //   .section-title {

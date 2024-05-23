@@ -6,6 +6,7 @@ import Lenify from "./components/Lenis";
 import Peek from "./components/sections/Peek";
 import Stack from "./components/sections/Stack";
 import CT from "./components/sections/CT";
+import Footer from "./components/sections/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Peek />
         <Stack />
         <CT />
+        <Footer />
       </Lenify>
     </main>
   );
