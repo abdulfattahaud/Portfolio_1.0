@@ -6,7 +6,10 @@ export default function Footer() {
   return (
     <footer id="footer">
       <div className="upper">
-        <LogoBlack />
+        <div className="logo-wrapper">
+          <LogoBlack />
+          <span>Fettah Aud</span>
+        </div>
         <div className="social-links">
           <Link target="_blank" href="https://www.facebook.com/fettahaud">
             <FB />
