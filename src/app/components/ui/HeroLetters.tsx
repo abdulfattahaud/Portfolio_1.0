@@ -13,7 +13,6 @@ const ALetter = () => {
     </svg>
   );
 };
-
 const FLetter = () => {
   return (
     <svg

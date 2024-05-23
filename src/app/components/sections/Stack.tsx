@@ -16,6 +16,8 @@ import {
   Figma,
   GSAP,
   Tailwind,
+  git,
+  github,
 } from "../ui/StackLogos";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -34,6 +36,8 @@ export default function Stack() {
     R3F,
     Figma,
     GSAP,
+    git,
+    github,
   ];
   useGSAP(() => {
     ScrollTrigger.create({

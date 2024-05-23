@@ -1,6 +1,5 @@
 import "./styles/globals.scss";
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
 
 export const metadata: Metadata = {
   title: "Fettah",
@@ -14,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
+    <html lang="en">
       <head>
         <link rel="icon" href="/logo.svg" type="image/png" sizes="16x16" />
         <link rel="icon" href="/favicon.svg" />

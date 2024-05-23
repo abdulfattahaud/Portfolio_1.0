@@ -19,37 +19,6 @@
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
   background-color: #000;
   z-index: 10;
-  // .logo {
-  //   font-size: 20px;
-  //   font-weight: 700;
-  //   color: #000;
-  //   cursor: pointer;
-  //   display: flex;
-  //   align-items: center;
-  //   gap: 10px;
-  //   width: 186px;
-  //   overflow: hidden;
-  //   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) width;
-  //   &:hover {
-  //     width: 217px;
-  //     span.text span {
-  //       transform: translateX(-55px);
-  //     }
-  //     span.copy {
-  //       transform: rotate(-360deg);
-  //     }
-  //   }
-  //   span {
-  //     display: inline-block;
-  //     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) all;
-  //     &.text {
-  //       text-wrap: nowrap;
-  //       overflow: hidden;
-  //       span {
-  //       }
-  //     }
-  //   }
-  // }
   ul {
     display: none;
     gap: 25px;
@@ -176,11 +145,7 @@
           font-size: 16px;
           line-height: 131.1%;
           color: #2a2a2a;
-          // font-weight: 500;
           display: -webkit-box;
-          // -webkit-line-clamp: 4;
-          // -webkit-box-orient: vertical;
-          // overflow: hidden;
           span {
             display: inline;
           }
