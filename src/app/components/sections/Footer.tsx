@@ -25,7 +25,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <div className="lower">
+      <div className="lower dashed-border dashed-border-light dashed-border-t">
         <span className="copy">© 2024 Fettah Aud. All rights reserved.</span>
         <div>
           <span>TÜRKİYE İstanbul</span>

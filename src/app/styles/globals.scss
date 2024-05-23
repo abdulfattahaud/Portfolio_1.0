@@ -104,6 +104,53 @@ h1 {
   line-height: 125.5%;
 }
 
+.dashed-border {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    // make dashed border
+    background-image: linear-gradient(
+      to right,
+      hsla(0, 0%, 100%, 0.4) 50%,
+      transparent 0
+    );
+    background-position: 0 100%;
+    background-size: 14px;
+    background-repeat: repeat-x;
+  }
+  &::after {
+    top: 0;
+  }
+  &::before {
+    bottom: 0;
+  }
+  &-light {
+    &::before,
+    &::after {
+      background-image: linear-gradient(
+        to right,
+        hsla(0, 0%, 0%, 0.4) 50%,
+        transparent 0
+      );
+    }
+  }
+  &-t {
+    &::before {
+      content: unset;
+    }
+  }
+  &-b {
+    &::after {
+      content: unset;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .buf {
     font-size: 14px;

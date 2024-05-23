@@ -8,7 +8,7 @@ import UpworkLogo from "../ui/UpworkLogo";
 
 export default function CT() {
   return (
-    <div className="ct">
+    <div className="ct dashed-border  dashed-border-light">
       <header>
         <h1>Customer Testimonials</h1>
         <p>Hear our what clients have to say about our work</p>

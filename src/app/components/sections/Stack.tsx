@@ -17,6 +17,8 @@ import {
   GSAP,
   Tailwind,
 } from "../ui/StackLogos";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 
 export default function Stack() {
   const stack = [
@@ -33,8 +35,18 @@ export default function Stack() {
     Figma,
     GSAP,
   ];
+  useGSAP(() => {
+    ScrollTrigger.create({
+      trigger: "#stack",
+      markers: false,
+      start: "top 70px",
+      end: "100% 70px",
+      pin: true,
+      pinSpacing: false,
+    });
+  });
   return (
-    <div className="stack">
+    <div id="stack" className="stack">
       <article>
         <h3>Technologies in My Stack</h3>
         <div className="logos-wrapper">

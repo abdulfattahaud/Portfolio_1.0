@@ -1,6 +1,6 @@
 export default function Peek() {
   return (
-    <div className="peek">
+    <div className="peek dashed-border">
       <article className="content">
         <h1>
           Experienced Freelancer Specializing in
