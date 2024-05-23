@@ -19,37 +19,37 @@
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
   background-color: #000;
   z-index: 10;
-  .logo {
-    font-size: 20px;
-    font-weight: 700;
-    color: #000;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 186px;
-    overflow: hidden;
-    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) width;
-    &:hover {
-      width: 217px;
-      span.text span {
-        transform: translateX(-55px);
-      }
-      span.copy {
-        transform: rotate(-360deg);
-      }
-    }
-    span {
-      display: inline-block;
-      transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) all;
-      &.text {
-        text-wrap: nowrap;
-        overflow: hidden;
-        span {
-        }
-      }
-    }
-  }
+  // .logo {
+  //   font-size: 20px;
+  //   font-weight: 700;
+  //   color: #000;
+  //   cursor: pointer;
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 10px;
+  //   width: 186px;
+  //   overflow: hidden;
+  //   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) width;
+  //   &:hover {
+  //     width: 217px;
+  //     span.text span {
+  //       transform: translateX(-55px);
+  //     }
+  //     span.copy {
+  //       transform: rotate(-360deg);
+  //     }
+  //   }
+  //   span {
+  //     display: inline-block;
+  //     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+  //     &.text {
+  //       text-wrap: nowrap;
+  //       overflow: hidden;
+  //       span {
+  //       }
+  //     }
+  //   }
+  // }
   ul {
     display: none;
     gap: 25px;
@@ -147,6 +147,7 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1.4px;
+      text-align: center;
     }
   }
   .logos-wrapper {
@@ -339,7 +340,7 @@
   h1 {
     font-size: 28px;
   }
-  .hero .letter svg {
+  .hero .letters svg {
     height: 80px;
   }
   .peek .content {
@@ -403,5 +404,58 @@
     div {
       margin-left: auto;
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --margin-x: 10px;
+    --margin-y: 60px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .logo {
+    width: 28px;
+    height: 28px;
+  }
+  .hero .letters {
+    padding-bottom: 120px;
+    svg {
+      height: 60px;
+    }
+  }
+  .peek .content p {
+    font-size: 14px;
+  }
+  .stack .logos-wrapper .splide__slide {
+    width: 50px !important;
+  }
+  .ct .testimonials {
+    padding-bottom: 40px;
+    .testi-card .details {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      .user-wrapper {
+        border-right: 0;
+        border-bottom: 1px solid #000;
+        padding-bottom: 20px;
+        padding-right: 0;
+        width: 100%;
+      }
+    }
+    .splide__arrows {
+      // bottom: -80px;
+      display: none;
+    }
+    .splide__pagination {
+      bottom: -30px;
+      left: 50%;
+      translate: -50% 0;
+    }
+  }
+  #footer .lower .copy {
+    font-size: 14px;
   }
 }
