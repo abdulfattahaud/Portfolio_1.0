@@ -6,11 +6,13 @@ import Peek from "./components/sections/Peek";
 import Stack from "./components/sections/Stack";
 import CT from "./components/sections/CT";
 import Footer from "./components/sections/Footer";
+import LoadScreen from "./components/ui/LoadScreen";
 
 export default function Home() {
   return (
     <main>
       <Lenify>
+        <LoadScreen />
         <Header />
         <Main />
         <Peek />
