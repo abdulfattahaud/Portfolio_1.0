@@ -15,7 +15,7 @@ export default function Home() {
         <Header />
         <Main />
         <Peek />
-        <Stack />
+        {/* <Stack /> */}
         <CT />
         <Footer />
       </Lenify>

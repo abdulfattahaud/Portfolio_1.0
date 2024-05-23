@@ -55,6 +55,11 @@ export default function Stack() {
                 pauseOnHover: false,
                 loop: true,
               },
+              breakpoints: {
+                768: {
+                  gap: "30px",
+                },
+              },
             }}
             extensions={{ AutoScroll }}
           >

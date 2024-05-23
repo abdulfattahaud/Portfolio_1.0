@@ -20,6 +20,11 @@ export default function CT() {
             perPage: 2,
             gap: "20px",
             perMove: 1,
+            breakpoints: {
+              768: {
+                perPage: 1,
+              },
+            },
           }}
         >
           <SplideTrack>
