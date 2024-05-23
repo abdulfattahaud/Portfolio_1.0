@@ -22,7 +22,7 @@ const feedback = [
   {
     starCount: 5,
     text: "He is very good in his work. I will definitely work with him again.",
-    userName: "SATNAM SINGH",
+    userName: "Satnam Singh",
     userPhoto: "",
     userTitle: "",
     jobSrc: "Upwork",
@@ -31,7 +31,7 @@ const feedback = [
   {
     starCount: 5,
     text: "As per the commitment he delivered the project within timeline successfully.",
-    userName: "SATNAM SINGH",
+    userName: "Satnam Singh",
     userPhoto: "",
     userTitle: "",
     jobSrc: "Upwork",
