@@ -1,12 +1,11 @@
 import "./styles/page.scss";
 import Header from "@/app/components/sections/Header";
-import Footer from "@/app/components/sections/Footer";
 import Main from "@/app/components/sections/Main";
-import About from "@/app/components/sections/About";
-import Projects from "@/app/components/sections/Projects";
+// import Projects from "@/app/components/sections/Projects";
 import Lenify from "./components/Lenis";
 import Peek from "./components/sections/Peek";
 import Stack from "./components/sections/Stack";
+import CT from "./components/sections/CT";
 
 export default function Home() {
   return (
@@ -16,9 +15,7 @@ export default function Home() {
         <Main />
         <Peek />
         <Stack />
-        {/* <Projects />
-        <About />
-        <Footer /> */}
+        <CT />
       </Lenify>
     </main>
   );
