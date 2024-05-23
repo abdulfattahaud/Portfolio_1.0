@@ -59,7 +59,7 @@ export default function CT() {
                         )}
                       </figure>
                       <div className="user">
-                        <h4>{f.userName}</h4>
+                        <h2 className="user-name">{f.userName}</h2>
                         <p>{f.userTitle}</p>
                       </div>
                     </div>

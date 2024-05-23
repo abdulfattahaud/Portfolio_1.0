@@ -54,7 +54,7 @@ export default function Stack() {
   return (
     <div id="stack" className="stack">
       <article>
-        <h3>Technologies in My Stack</h3>
+        <h1 className="heading">Technologies in My Stack</h1>
         <div className="logos-wrapper">
           <Splide
             aria-label="Stack Logos"

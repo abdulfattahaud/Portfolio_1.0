@@ -11,16 +11,32 @@ export default function Footer() {
           <span>Fettah Aud</span>
         </div>
         <div className="social-links">
-          <Link target="_blank" href="https://www.facebook.com/fettahaud">
+          <Link
+            aria-label="Facebook link to Fettah Aud's profile"
+            target="_blank"
+            href="https://www.facebook.com/fettahaud"
+          >
             <FB />
           </Link>
-          <Link target="_blank" href="https://www.instagram.com/fettahaud/">
+          <Link
+            aria-label="Instagram link to Fettah Aud's profile"
+            target="_blank"
+            href="https://www.instagram.com/fettahaud/"
+          >
             <IG />
           </Link>
-          <Link target="_blank" href="https://x.com/Fettah_Aud">
+          <Link
+            aria-label="Twitter/X link to Fettah Aud's profile"
+            target="_blank"
+            href="https://x.com/Fettah_Aud"
+          >
             <X />
           </Link>
-          <Link target="_blank" href="https://www.linkedin.com/in/fettah-aud/">
+          <Link
+            aria-label="LinkedIn link to Fettah Aud's profile"
+            target="_blank"
+            href="https://www.linkedin.com/in/fettah-aud/"
+          >
             <LIn />
           </Link>
         </div>

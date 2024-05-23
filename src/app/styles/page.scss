@@ -87,7 +87,7 @@
     align-items: center;
     flex-direction: column;
     gap: 50px;
-    h3 {
+    .heading {
       font-size: 20px;
       font-weight: 500;
       text-transform: uppercase;
@@ -184,7 +184,7 @@
             flex-direction: column;
             gap: 4px;
             color: #000;
-            h4 {
+            .user-name {
               font-size: 18px;
               font-weight: 500;
               line-height: 131.1%;
@@ -301,7 +301,7 @@
     .logos-wrapper .splide__slide {
       width: 60px !important;
     }
-    .stack article {
+    article {
       gap: 30px;
       h3 {
         font-size: 16px;
