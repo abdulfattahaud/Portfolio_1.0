@@ -2,9 +2,36 @@ import "./styles/globals.scss";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fettah",
-  description:
-    "Frontend / Creative Developer. I'll make your design come alive",
+  title: "Fettah Aud",
+  description: "Creative Frontend Developer | React, GSAP, ThreeJs, WebGL",
+  openGraph: {
+    type: "website",
+    url: "https://fettah.dev",
+    title: "Fettah Aud",
+    description: "Creative Frontend Developer | React, GSAP, ThreeJs, WebGL",
+    images: [
+      {
+        url: "/meta-photo.png",
+        width: 1200,
+        height: 630,
+        alt: "Fettah Aud",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "https://fettah.dev",
+    title: "Fettah Aud",
+    description: "Creative Frontend Developer | React, GSAP, ThreeJs, WebGL",
+    images: [
+      {
+        url: "/meta-photo.png",
+        width: 1200,
+        height: 630,
+        alt: "Fettah Aud",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
