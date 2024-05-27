@@ -8,7 +8,7 @@ export default function CanvasComp() {
     <Canvas>
       <Donut />
       <TDLetters />
-      <CameraControls />
+      {/* <CameraControls /> */}
       <directionalLight intensity={2} position={[0, 2, 3]} />
       <Environment preset="city" />
     </Canvas>
