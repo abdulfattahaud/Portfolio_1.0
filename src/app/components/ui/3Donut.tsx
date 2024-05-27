@@ -5,20 +5,26 @@ import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion-3d";
 
 export default function Donut() {
-  const { nodes } = useGLTF("/torrus.glb");
   const { viewport } = useThree();
   const torus = useRef(null);
   const { scrollYProgress } = useScroll({
+    //@ts-ignore
     container: ".hero",
   });
   const y = useTransform(scrollYProgress, [0, 1], [0, 2.5]);
   useFrame(() => {
+    //@ts-ignore
     torus.current.rotation.x += 0.02;
+    //@ts-ignore
+    torus.current.rotation.z -= 0.02;
   });
 
   return (
     <group scale={viewport.width / 3.75}>
-      <motion.mesh ref={torus} {...nodes.Torus002} position={[0, y, 0]}>
+      {/* @ts-ignore */}
+      <motion.mesh ref={torus} scale={0.3} position={[0, y, 0]}>
+        <torusKnotGeometry args={[1, 0.4, 100, 32]} />
+        {/* @ts-ignore */}
         <MeshTransmissionMaterial
           thickness={0.2}
           roughness={0}

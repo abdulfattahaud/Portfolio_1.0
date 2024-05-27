@@ -18,10 +18,10 @@ export default function Home() {
         <LoadScreen setLoading={setLoading} loading={loading} />
         <Header loaded={loading} />
         <Main />
-        <Peek />
+        {/* <Peek />
         <Stack />
         <CT />
-        <Footer />
+        <Footer /> */}
       </Lenify>
     </main>
   );
