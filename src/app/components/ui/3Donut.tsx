@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useSpring, useTransform } from "framer-motion";
 import { motion } from "framer-motion-3d";
 
 export default function Donut() {
@@ -12,6 +12,7 @@ export default function Donut() {
     container: ".hero",
   });
   const y = useTransform(scrollYProgress, [0, 1], [0, 2.5]);
+  const springY = useSpring(y, { stiffness: 400, damping: 90 });
   useFrame(() => {
     //@ts-ignore
     torus.current.rotation.x += 0.02;
@@ -22,7 +23,7 @@ export default function Donut() {
   return (
     <group scale={viewport.width / 3.75}>
       {/* @ts-ignore */}
-      <motion.mesh ref={torus} scale={0.3} position={[0, y, 0]}>
+      <motion.mesh ref={torus} scale={0.3} position={[0, springY, 0]}>
         <torusKnotGeometry args={[1, 0.4, 100, 32]} />
         {/* @ts-ignore */}
         <MeshTransmissionMaterial
