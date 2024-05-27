@@ -12,11 +12,11 @@ export default function Header({ loaded }: { loaded: boolean }) {
 
   useGSAP(() => {
     if (header.current) {
-      gsap.set(header.current?.querySelector(".logo"), {
+      gsap.set(".logo", {
         y: "-200%",
       });
       if (loaded) {
-        gsap.to(header.current?.querySelector(".logo"), {
+        gsap.to(".logo", {
           duration: 0.5,
           y: "0%",
           delay: 0.75,
