@@ -371,6 +371,22 @@ const GSAP = () => {
     </svg>
   );
 };
+const FramerMotion = () => {
+  return (
+    <svg
+      className="stack-logo"
+      viewBox="0 0 80 80"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="80" height="80" rx="0" fill="white" />
+      <path
+        d="M18.8359 8.25391H61.1641V29.418H40L18.8359 8.25391ZM18.8359 29.418H40L61.1641 50.582H40V71.7461L18.8359 50.582V29.418Z"
+        fill="black"
+      />
+    </svg>
+  );
+};
 const Tailwind = () => {
   return (
     <svg
@@ -511,4 +527,5 @@ export {
   git,
   github,
   Vite,
+  FramerMotion,
 };

@@ -19,6 +19,7 @@ import {
   git,
   github,
   Vite,
+  FramerMotion,
 } from "../ui/StackLogos";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -37,6 +38,7 @@ export default function Stack() {
     R3F,
     Figma,
     GSAP,
+    FramerMotion,
     git,
     github,
     Vite,
