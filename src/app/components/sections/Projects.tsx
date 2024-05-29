@@ -35,6 +35,54 @@ const projects: Project[] = [
       ],
     },
   },
+  {
+    title: "Project One",
+    category: "Web Development",
+    client: "Practice",
+    year: "2024",
+    body: {
+      title: "Project title / Description",
+      link: "https://fettah.dev",
+      list: ["Development", "Web Animation", "React", "Next.js"],
+      gallery: [
+        // { src: "", alt: "" },
+        // { src: "", alt: "" },
+        // { src: "", alt: "" },
+      ],
+    },
+  },
+  {
+    title: "Project One",
+    category: "Web Development",
+    client: "Practice",
+    year: "2024",
+    body: {
+      title: "Project title / Description",
+      link: "https://fettah.dev",
+      list: ["Development", "Web Animation", "React", "Next.js"],
+      gallery: [
+        // { src: "", alt: "" },
+        // { src: "", alt: "" },
+        // { src: "", alt: "" },
+      ],
+    },
+  },
+  {
+    title: "Project One",
+    category: "Web Development",
+    client: "Practice",
+    year: "2024",
+    body: {
+      title: "Project title / Description",
+      link: "https://fettah.dev",
+      list: ["Development", "Web Animation", "React", "Next.js"],
+      gallery: [
+        // { src: "", alt: "" },
+        // { src: "", alt: "" },
+        // { src: "", alt: "" },
+      ],
+    },
+  },
 ];
 
 const ProjectRow = ({ title, category, client, year, body }: Project) => {
@@ -119,10 +167,10 @@ const ProjectRow = ({ title, category, client, year, body }: Project) => {
   return (
     <>
       <div ref={item} className="row body">
-        <p className="cell">Project One</p>
-        <p className="cell">Web Development</p>
-        <p className="cell">Practice</p>
-        <p className="cell">2024</p>
+        <p className="cell">{title}</p>
+        <p className="cell">{category}</p>
+        <p className="cell">{client}</p>
+        <p className="cell">{year}</p>
         <div className="row-bg"></div>
       </div>
       <div ref={projectBody} className="project-body" style={{ height: "0" }}>
