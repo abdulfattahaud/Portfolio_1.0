@@ -454,6 +454,17 @@
       }
     }
   }
+  .projects {
+    .row {
+      justify-content: flex-start;
+      .cell:first-child {
+        width: 50vw;
+      }
+      .cell:not(:first-child):not(:last-of-type) {
+        display: none;
+      }
+    }
+  }
   .stack {
     .logos-wrapper .splide__slide {
       width: 60px !important;
