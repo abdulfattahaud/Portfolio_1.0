@@ -9,6 +9,7 @@ import CT from "./components/sections/CT";
 import Footer from "./components/sections/Footer";
 import LoadScreen from "./components/ui/LoadScreen";
 import { useState } from "react";
+import Projects from "./components/sections/Projects";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -19,6 +20,7 @@ export default function Home() {
         <Header loaded={loading} />
         <Main />
         <Peek />
+        <Projects />
         <Stack />
         <CT />
         <Footer />

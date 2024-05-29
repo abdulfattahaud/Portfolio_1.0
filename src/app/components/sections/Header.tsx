@@ -26,7 +26,7 @@ export default function Header({ loaded }: { loaded: boolean }) {
     }
   }, [loaded]);
   return (
-    <header ref={header} className="header">
+    <header ref={header} id="header">
       <Logo />
       <div>
         <ul>

@@ -11,17 +11,17 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Main() {
   useGSAP(() => {
     const tl = gsap.timeline();
-    ScrollTrigger.create({
-      trigger: ".hero",
-      start: "top 70px",
-      end: "100% 70px",
-      scrub: 1,
-      markers: false,
-      animation: tl,
-      pin: true,
-      pinSpacing: false,
-      // once: true,
-    });
+    // ScrollTrigger.create({
+    //   trigger: ".hero",
+    //   start: "top 70px",
+    //   end: "100% 70px",
+    //   scrub: 1,
+    //   markers: false,
+    //   animation: tl,
+    //   pin: true,
+    //   // pinSpacing: false,
+    //   // once: true,
+    // });
     // take odd
     // tl.from(
     //   ".letter:first-child",
