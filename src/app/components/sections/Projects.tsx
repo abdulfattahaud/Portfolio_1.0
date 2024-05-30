@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { ImageUtils } from "three";
-import { ScrollTrigger } from "gsap/all";
 
 interface Project {
   title: string;
@@ -104,11 +102,13 @@ const ProjectRow = ({
   link,
   images,
   techs,
-}) => {
+}: any) => {
   const item = useRef<HTMLDivElement | null>(null);
   const projectBody = useRef<HTMLDivElement | null>(null);
   const [open, setOpen] = useState(false);
-  const imageList = images.data.map(({ attributes }) => ({ ...attributes }));
+  const imageList = images.data.map(({ attributes }: any) => ({
+    ...attributes,
+  }));
   console.log(imageList);
 
   const enterAnimation = (e: any) => {
@@ -204,14 +204,14 @@ const ProjectRow = ({
         </button>
         <ul className="techs">
           {/* split line by - */}
-          {techs.split("-").map((tech, i) => (
+          {techs.split("-").map((tech: any, i: number) => (
             <li key={i} className="tech">
               {tech}
             </li>
           ))}
         </ul>
         <div className="gallery">
-          {imageList.map((img, i) => (
+          {imageList.map((img: any, i: number) => (
             <div key={i} className="img-wrapper">
               <Image
                 src={img.url}
@@ -246,7 +246,7 @@ export default function Projects() {
           <div className="cell">Client</div>
           <div className="cell">Year</div>
         </div>
-        {projects.map((project) => (
+        {projects.map((project: any) => (
           <ProjectRow key={project.id} {...project.attributes} />
         ))}
       </div>
