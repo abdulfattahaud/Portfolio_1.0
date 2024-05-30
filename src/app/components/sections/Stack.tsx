@@ -43,16 +43,16 @@ export default function Stack() {
     github,
     Vite,
   ];
-  useGSAP(() => {
-    ScrollTrigger.create({
-      trigger: "#stack",
-      markers: false,
-      start: "top 70px",
-      end: "100% 70px",
-      pin: true,
-      pinSpacing: false,
-    });
-  });
+  // useGSAP(() => {
+  //   ScrollTrigger.create({
+  //     trigger: "#stack",
+  //     markers: false,
+  //     start: "top 70px",
+  //     end: "100% 70px",
+  //     pin: true,
+  //     // pinSpacing: false,
+  //   });
+  // });
   return (
     <div id="stack" className="stack">
       <article>

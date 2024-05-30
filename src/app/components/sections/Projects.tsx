@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { ImageUtils } from "three";
+import { ScrollTrigger } from "gsap/all";
 
 interface Project {
   title: string;
@@ -85,10 +87,29 @@ const projects: Project[] = [
   },
 ];
 
-const ProjectRow = ({ title, category, client, year, body }: Project) => {
+const fetchProjects = async () => {
+  const res = await fetch(
+    "https://decisive-chocolate-cc1b05bddb.strapiapp.com/api/projects?populate=*"
+  );
+  const data = await res.json();
+  return data;
+};
+
+const ProjectRow = ({
+  Title,
+  category,
+  client,
+  year,
+  longTitle,
+  link,
+  images,
+  techs,
+}) => {
   const item = useRef<HTMLDivElement | null>(null);
   const projectBody = useRef<HTMLDivElement | null>(null);
   const [open, setOpen] = useState(false);
+  const imageList = images.data.map(({ attributes }) => ({ ...attributes }));
+  console.log(imageList);
 
   const enterAnimation = (e: any) => {
     const currentItem = item.current;
@@ -151,6 +172,7 @@ const ProjectRow = ({ title, category, client, year, body }: Project) => {
 
   useEffect(() => {
     const currentProjectBody = projectBody.current;
+    // ScrollTrigger.refresh();
     if (!currentProjectBody) return;
     if (open) {
       gsap.to(currentProjectBody, {
@@ -167,26 +189,41 @@ const ProjectRow = ({ title, category, client, year, body }: Project) => {
   return (
     <>
       <div ref={item} className="row body">
-        <p className="cell">{title}</p>
+        <p className="cell">{Title}</p>
         <p className="cell">{category}</p>
         <p className="cell">{client}</p>
         <p className="cell">{year}</p>
         <div className="row-bg"></div>
       </div>
       <div ref={projectBody} className="project-body" style={{ height: "0" }}>
-        <h1 className="title">{body.title}</h1>
+        <h1 className="title">{longTitle}</h1>
         <button className="but link">
-          <Link href={body.link}>See Website</Link>
+          <Link href={link} target="_blank">
+            See Website
+          </Link>
         </button>
-        <ul>
-          {body.list.map((item, i) => (
-            <li key={i}>{item}</li>
+        <ul className="techs">
+          {/* split line by - */}
+          {techs.split("-").map((tech, i) => (
+            <li key={i} className="tech">
+              {tech}
+            </li>
           ))}
         </ul>
         <div className="gallery">
-          {body.gallery.map((img, i) => (
-            <Image key={i} src={img.src} alt={img.alt} />
+          {imageList.map((img, i) => (
+            <div key={i} className="img-wrapper">
+              <Image
+                src={img.url}
+                alt={img.alternativeText}
+                width={img.width}
+                height={384}
+              />
+            </div>
           ))}
+          {/* <div className="img-wrapper">
+            <Image src={"/01.png"} width={1920} height={1280} alt="" />
+          </div> */}
         </div>
       </div>
     </>
@@ -194,6 +231,12 @@ const ProjectRow = ({ title, category, client, year, body }: Project) => {
 };
 
 export default function Projects() {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    fetchProjects().then(({ data }) => {
+      setProjects(data);
+    });
+  }, []);
   return (
     <section className="projects">
       <div className="projects-table">
@@ -203,8 +246,8 @@ export default function Projects() {
           <div className="cell">Client</div>
           <div className="cell">Year</div>
         </div>
-        {projects.map((project, i) => (
-          <ProjectRow key={i} {...project} />
+        {projects.map((project) => (
+          <ProjectRow key={project.id} {...project.attributes} />
         ))}
       </div>
     </section>
