@@ -109,7 +109,6 @@ const ProjectRow = ({
   const imageList = images.data.map(({ attributes }: any) => ({
     ...attributes,
   }));
-  console.log(imageList);
 
   const enterAnimation = (e: any) => {
     const currentItem = item.current;
@@ -203,7 +202,6 @@ const ProjectRow = ({
           </Link>
         </button>
         <ul className="techs">
-          {/* split line by - */}
           {techs.split("-").map((tech: any, i: number) => (
             <li key={i} className="tech">
               {tech}
@@ -221,9 +219,6 @@ const ProjectRow = ({
               />
             </div>
           ))}
-          {/* <div className="img-wrapper">
-            <Image src={"/01.png"} width={1920} height={1280} alt="" />
-          </div> */}
         </div>
       </div>
     </>

@@ -16,7 +16,7 @@ export default function CanvasComp() {
       // enabled={active} 
       /> */}
       <directionalLight intensity={2} position={[0, 2, 3]} />
-      <Environment preset="city" />
+      <Environment preset="night" />
     </Canvas>
   );
 }
