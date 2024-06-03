@@ -18,11 +18,9 @@ export default function Donut() {
 
   const mouse = {
     x: useSpring(0, { stiffness: 400, damping: 90 }),
-    y: useSpring(0, { stiffness: 400, damping: 90 }),
   };
   const handleMouseMove = (e: MouseEvent) => {
     mouse.x.set((e.clientX / window.innerWidth - 0.5) * 10);
-    mouse.y.set(-(e.clientY / window.innerHeight - 0.5) * 10);
   };
   useEffect(() => {
     const canvas = document.querySelector("canvas");
@@ -43,7 +41,7 @@ export default function Donut() {
       <motion.mesh
         scale={scale}
         // @ts-ignore
-        position={[mouse.x, mouse.y, -5]}
+        position={[mouse.x, 0, -5]}
       >
         <sphereGeometry args={[1, 32, 32]} />
         <MeshTransmissionMaterial
