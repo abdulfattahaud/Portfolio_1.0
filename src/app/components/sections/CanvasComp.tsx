@@ -1,8 +1,4 @@
-import {
-  CameraControls,
-  Environment,
-  PerspectiveCamera,
-} from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Donut from "../ui/3Donut";
 import TDLetters from "../ui/3DLetters";

@@ -1,12 +1,20 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { MeshTransmissionMaterial } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import { useSpring } from "framer-motion";
 import { motion } from "framer-motion-3d";
+import { useControls } from "leva";
 
 export default function Donut() {
   const { viewport } = useThree();
   const [scale, setScale] = useState(viewport.width / 1.5);
+  const [debug, setDebug] = useState(false);
+
+  const { color } = useControls({
+    color: { value: "#0ff", label: "Color" },
+  });
 
   useEffect(() => {
     if (viewport.aspect < 0.6) {
@@ -23,6 +31,9 @@ export default function Donut() {
     mouse.x.set((e.clientX / window.innerWidth - 0.5) * 10);
   };
   useEffect(() => {
+    if (window.location.hash === "#debug") {
+      setDebug(true);
+    }
     const canvas = document.querySelector("canvas");
     if (canvas) {
       canvas.addEventListener("mousemove", handleMouseMove);
@@ -51,7 +62,7 @@ export default function Donut() {
           ior={1.2}
           chromaticAberration={0.03}
           backside={false}
-          color={"#0ff"}
+          color={debug ? color : "#0ff"}
           distortionScale={0.5}
           temporalDistortion={0.1}
         />
