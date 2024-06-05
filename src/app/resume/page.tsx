@@ -102,8 +102,9 @@ const Resume: React.FC = () => {
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             <div className="flex flex-col w-[65%] max-md:ml-0 max-md:w-full">
               <article className="grow justify-center px-10 py-8 w-full text-lg text-black bg-zinc-100 max-md:px-5 max-md:mt-7 max-md:max-w-full">
-                I'm a <span className="font-semibold">Frontend Developer</span>{" "}
-                based in Istanbul with
+                I&apos;m a{" "}
+                <span className="font-semibold">Frontend Developer</span> based
+                in Istanbul with
                 <span className="font-semibold">4 years of experience</span> in
                 the software industry. My focus area for the past few years has
                 been Creative development with 3JS, WebGL, and R3F.
