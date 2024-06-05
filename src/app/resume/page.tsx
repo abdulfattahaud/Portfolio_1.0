@@ -95,7 +95,7 @@ const Resume: React.FC = () => {
     <div className="flex justify-center items-center px-16 py-20 bg-white max-md:px-5 font-geist">
       <div className="flex flex-col mt-20 w-full max-w-[1100px] max-md:mt-10 max-md:max-w-full">
         <header className="text-5xl font-semibold text-black font-geist max-md:max-w-full max-md:text-4xl">
-          Abdulfettah Adwani 📄
+          Abdulfettah Adwani
         </header>
 
         <section className="mt-12 max-md:mt-10 max-md:max-w-full">
