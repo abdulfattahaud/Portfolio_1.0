@@ -13,11 +13,11 @@ export default function Header({ loaded }: { loaded: boolean }) {
 
   useGSAP(() => {
     if (header.current) {
-      gsap.set(".header .logo", {
+      gsap.set("#header svg", {
         y: "-200%",
       });
       if (loaded) {
-        gsap.to(".header .logo", {
+        gsap.to("#header svg", {
           duration: 0.5,
           y: "0%",
           delay: 0.75,
@@ -28,7 +28,9 @@ export default function Header({ loaded }: { loaded: boolean }) {
   }, [loaded]);
   return (
     <header ref={header} id="header">
-      <Logo />
+      <Link href="/">
+        <Logo />
+      </Link>
       <Link className="resume" href="/resume">
         <svg
           className="w-7 h-7"

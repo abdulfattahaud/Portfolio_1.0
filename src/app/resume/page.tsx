@@ -1,4 +1,9 @@
+"use client";
 import * as React from "react";
+import "../styles/page.scss";
+import Header from "../components/sections/Header";
+import Lenify from "../components/Lenis";
+import LoadScreen from "../components/ui/LoadScreen";
 
 type ExperienceProps = {
   title: string;
@@ -62,7 +67,7 @@ const Contact: React.FC<ContactProps> = ({ website, email, linkedin }) => (
   </div>
 );
 
-const Resume: React.FC = () => {
+const ResumeContent: React.FC = () => {
   const experiences = [
     {
       title: "Freelancer Developer - 22/24",
@@ -92,8 +97,8 @@ const Resume: React.FC = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center px-16 py-20 bg-white max-md:px-5 font-geist">
-      <div className="flex flex-col mt-20 w-full max-w-[1100px] max-md:mt-10 max-md:max-w-full">
+    <div className="flex justify-center items-center px-20 pt-10 pb-20 bg-white max-md:px-5 font-geist">
+      <div className="flex flex-col mt-20 w-full max-md:mt-10 max-md:max-w-full">
         <header className="text-5xl font-semibold text-black font-geist max-md:max-w-full max-md:text-4xl">
           Abdulfettah Adwani
         </header>
@@ -154,6 +159,17 @@ const Resume: React.FC = () => {
         </section>
       </div>
     </div>
+  );
+};
+
+const Resume = () => {
+  const [loading, setLoading] = React.useState(true);
+  return (
+    <Lenify>
+      <LoadScreen setLoading={setLoading} loading={loading} />
+      <Header loaded />
+      <ResumeContent />
+    </Lenify>
   );
 };
 

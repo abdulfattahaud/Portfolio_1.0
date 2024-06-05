@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { MeshTransmissionMaterial } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import { useSpring } from "framer-motion";
@@ -27,14 +27,18 @@ export default function Donut() {
   const mouse = {
     x: useSpring(0, { stiffness: 400, damping: 90 }),
   };
-  const handleMouseMove = (e: MouseEvent) => {
-    mouse.x.set((e.clientX / window.innerWidth - 0.5) * 10);
-  };
   useEffect(() => {
     if (window.location.hash === "#debug") {
       setDebug(true);
     }
-    const canvas = document.querySelector("canvas");
+  }, [setDebug]);
+
+  useEffect(() => {
+    const canvas = document.querySelector("#canvas");
+    console.log(canvas);
+    const handleMouseMove = (e: MouseEvent) => {
+      mouse.x.set((e.clientX / window.innerWidth - 0.5) * 10);
+    };
     if (canvas) {
       canvas.addEventListener("mousemove", handleMouseMove);
     }

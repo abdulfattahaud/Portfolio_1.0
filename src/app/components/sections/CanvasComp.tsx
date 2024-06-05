@@ -4,7 +4,7 @@ import Donut from "../ui/3Donut";
 import TDLetters from "../ui/3DLetters";
 export default function CanvasComp() {
   return (
-    <Canvas>
+    <Canvas id="canvas">
       <Donut />
       <TDLetters />
       {/* <CameraControls /> */}
