@@ -167,7 +167,7 @@ const Resume = () => {
   return (
     <Lenify>
       <LoadScreen setLoading={setLoading} loading={loading} />
-      <Header loaded />
+      <Header />
       <ResumeContent />
     </Lenify>
   );
