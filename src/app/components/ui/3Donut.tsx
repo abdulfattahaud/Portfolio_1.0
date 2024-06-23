@@ -36,7 +36,7 @@ export default function Donut() {
   useEffect(() => {
     const canvas = document.querySelector("#canvas");
     console.log(canvas);
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: any) => {
       mouse.x.set((e.clientX / window.innerWidth - 0.5) * 10);
     };
     if (canvas) {
