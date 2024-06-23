@@ -9,7 +9,7 @@ interface Project {
   title: string;
   category: string;
   client: string;
-  year: string;
+  year: number;
   body: {
     title: string;
     link: string;
@@ -20,95 +20,68 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Project One",
-    category: "Web Development",
-    client: "Practice",
-    year: "2024",
+    title: "Can Yilmaz Portfolio",
+    category: "Landing Page",
+    client: "Can Yilmaz",
+    year: 2023,
     body: {
-      title: "Project title / Description",
-      link: "https://fettah.dev",
-      list: ["Development", "Web Animation", "React", "Next.js"],
+      title: "Can Yilmaz's personal animated portfolio",
+      link: "https://can-portfolio-plum.vercel.app/",
+      list: [
+        "Landing Page Development",
+        "Web Animation",
+        "React",
+        "Next.js",
+        "GSAP",
+      ],
       gallery: [
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
+        { src: "/projects images/can-yilmaz-01.png", alt: "" },
+        { src: "/projects images/can-yilmaz-02.png", alt: "" },
+        { src: "/projects images/can-yilmaz-03.png", alt: "" },
       ],
     },
   },
   {
-    title: "Project One",
-    category: "Web Development",
-    client: "Practice",
-    year: "2024",
+    title: "Entrepreneurs",
+    category: "React App",
+    client: "Qoves",
+    year: 2024,
     body: {
-      title: "Project title / Description",
-      link: "https://fettah.dev",
-      list: ["Development", "Web Animation", "React", "Next.js"],
+      title: "A React site for Qoves client's entrepreneurs",
+      link: "https://entrepreneurs-tawny.vercel.app/",
+      list: ["React", "Landing Page", "Next.js", "GSAP", "Lottie Files"],
       gallery: [
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
+        { src: "/projects images/ent-01.png", alt: "" },
+        { src: "/projects images/ent-02.png", alt: "" },
+        { src: "/projects images/ent-03.png", alt: "" },
       ],
     },
   },
   {
-    title: "Project One",
-    category: "Web Development",
-    client: "Practice",
-    year: "2024",
+    title: "Komet Website",
+    category: "React Site",
+    client: "Qoves",
+    year: 2024,
     body: {
-      title: "Project title / Description",
-      link: "https://fettah.dev",
-      list: ["Development", "Web Animation", "React", "Next.js"],
+      title: "A React site for Qoves client's Komet",
+      link: "https://komet-next.vercel.app/",
+      list: ["React", "Next.js", "Landing Page", "GSAP", "THREE.js"],
       gallery: [
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-      ],
-    },
-  },
-  {
-    title: "Project One",
-    category: "Web Development",
-    client: "Practice",
-    year: "2024",
-    body: {
-      title: "Project title / Description",
-      link: "https://fettah.dev",
-      list: ["Development", "Web Animation", "React", "Next.js"],
-      gallery: [
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
+        { alt: "", src: "/projects images/komet-01.png" },
+        { alt: "", src: "/projects images/komet-02.png" },
+        { alt: "", src: "/projects images/komet-03.png" },
       ],
     },
   },
 ];
 
-const fetchProjects = async () => {
-  const res = await fetch(
-    "https://decisive-chocolate-cc1b05bddb.strapiapp.com/api/projects?populate=*"
-  );
-  const data = await res.json();
-  return data;
-};
-
-const ProjectRow = ({
-  Title,
-  category,
-  client,
-  year,
-  longTitle,
-  link,
-  images,
-  techs,
-}: any) => {
+const ProjectRow = ({ title, category, client, year, body }: Project) => {
   const item = useRef<HTMLDivElement | null>(null);
   const projectBody = useRef<HTMLDivElement | null>(null);
   const [open, setOpen] = useState(false);
-  const imageList = images.data.map(({ attributes }: any) => ({
-    ...attributes,
-  }));
+  // const imageList = images.data.map(({ attributes }: any) => ({
+  //   ...attributes,
+  // }));
 
   const enterAnimation = (e: any) => {
     const currentItem = item.current;
@@ -188,35 +161,30 @@ const ProjectRow = ({
   return (
     <>
       <div ref={item} className="row body">
-        <p className="cell">{Title}</p>
+        <p className="cell">{title}</p>
         <p className="cell">{category}</p>
         <p className="cell">{client}</p>
         <p className="cell">{year}</p>
         <div className="row-bg"></div>
       </div>
       <div ref={projectBody} className="project-body" style={{ height: "0" }}>
-        <h1 className="title">{longTitle}</h1>
+        <h1 className="title">{body.title}</h1>
         <button className="but link">
-          <Link href={link} target="_blank">
+          <Link href={body.link} target="_blank">
             See Website
           </Link>
         </button>
         <ul className="techs">
-          {techs.split("-").map((tech: any, i: number) => (
+          {body.list.map((tech: any, i: number) => (
             <li key={i} className="tech">
               {tech}
             </li>
           ))}
         </ul>
         <div className="gallery">
-          {imageList.map((img: any, i: number) => (
+          {body.gallery.map((img: any, i: number) => (
             <div key={i} className="img-wrapper">
-              <Image
-                src={img.url}
-                alt={img.alternativeText}
-                width={img.width}
-                height={384}
-              />
+              <Image src={img.src} alt={img.alt} width={384} height={384} />
             </div>
           ))}
         </div>
@@ -226,12 +194,6 @@ const ProjectRow = ({
 };
 
 export default function Projects() {
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    fetchProjects().then(({ data }) => {
-      setProjects(data);
-    });
-  }, []);
   return (
     <section className="projects">
       <div className="projects-table">
@@ -242,7 +204,7 @@ export default function Projects() {
           <div className="cell">Year</div>
         </div>
         {projects.map((project: any) => (
-          <ProjectRow key={project.id} {...project.attributes} />
+          <ProjectRow key={project.id} {...project} />
         ))}
       </div>
     </section>
