@@ -23,9 +23,9 @@ export default function HomeController() {
   return (
     <main>
       <Lenify>
-        <LoadScreen setLoading={setLoading} loading={loading} />
+        {/* <LoadScreen setLoading={setLoading} loading={loading} /> */}
         <Leva hidden={!debug} />
-        <Header loaded={loading} />
+        <Header />
         <Main />
         <Peek />
         <Projects />

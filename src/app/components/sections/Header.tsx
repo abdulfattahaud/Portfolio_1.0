@@ -3,29 +3,29 @@
 import { useRef } from "react";
 import { useLenis } from "@studio-freight/react-lenis";
 import { Logo } from "../ui/Logo";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+// import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 
-export default function Header({ loaded }: { loaded: boolean }) {
+export default function Header() {
   const header = useRef<HTMLHeadingElement | null>(null);
-  const lenis = useLenis();
+  // const lenis = useLenis();
 
-  useGSAP(() => {
-    if (header.current) {
-      gsap.set("#header svg", {
-        y: "-200%",
-      });
-      if (loaded) {
-        gsap.to("#header svg", {
-          duration: 0.5,
-          y: "0%",
-          delay: 0.75,
-          ease: "power2.out",
-        });
-      }
-    }
-  }, [loaded]);
+  // useGSAP(() => {
+  //   if (header.current) {
+  //     gsap.set("#header svg", {
+  //       y: "-200%",
+  //     });
+  //     if (loaded) {
+  //       gsap.to("#header svg", {
+  //         duration: 0.5,
+  //         y: "0%",
+  //         delay: 0.75,
+  //         ease: "power2.out",
+  //       });
+  //     }
+  //   }
+  // }, [loaded]);
   return (
     <header ref={header} id="header">
       <Link href="/">
