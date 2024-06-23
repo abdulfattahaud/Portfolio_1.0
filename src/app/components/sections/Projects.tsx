@@ -59,7 +59,7 @@ const projects: Project[] = [
   },
   {
     title: "Komet Website",
-    category: "React Site",
+    category: "React App",
     client: "Qoves",
     year: 2024,
     body: {
