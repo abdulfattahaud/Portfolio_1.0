@@ -175,7 +175,13 @@ const ProjectRow = ({ title, category, client, year, body }: Project) => {
         </ul>
         <div className="gallery">
           {body.gallery.map((img, i) => (
-            <Image key={i} src={img.src} alt={img.alt} />
+            <Image
+              key={i}
+              src={img.src}
+              alt={img.alt}
+              width={400}
+              height={400}
+            />
           ))}
         </div>
       </div>
