@@ -6,9 +6,25 @@ import Stars from "../ui/Stars";
 import feedback from "@/app/utils/feedback";
 import UpworkLogo from "../ui/UpworkLogo";
 
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function CT() {
+  // useGSAP(() => {
+  //   ScrollTrigger.create({
+  //     trigger: "#ct",
+  //     markers: false,
+  //     start: "top 70px",
+  //     end: "100% 70px",
+  //     pin: true,
+  //     pinSpacing: false,
+  //   });
+  // });
   return (
-    <div className="ct dashed-border  dashed-border-light">
+    <div id="ct" className="ct dashed-border dashed-border-light">
       <header>
         <h1>Customer Testimonials</h1>
         <p>Hear our what clients have to say about our work</p>
@@ -97,7 +113,7 @@ export default function CT() {
                 <path
                   d="M15.6335 25.0003L34.3662 25.0003M34.3662 25.0003L27.2478 32.1188M34.3662 25.0003L27.2478 17.8819"
                   stroke="black"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
               </svg>
             </button>
@@ -125,7 +141,7 @@ export default function CT() {
                 <path
                   d="M15.6335 25.0003L34.3662 25.0003M34.3662 25.0003L27.2478 32.1188M34.3662 25.0003L27.2478 17.8819"
                   stroke="black"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
               </svg>
             </button>
@@ -139,6 +155,6 @@ export default function CT() {
 {
   /* <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="25" cy="25.0002" r="24.5" transform="rotate(-180 25 25.0002)" fill="white" stroke="black"/>
-<path d="M15.6335 25.0003L34.3662 25.0003M34.3662 25.0003L27.2478 32.1188M34.3662 25.0003L27.2478 17.8819" stroke="black" stroke-width="1.5"/>
+<path d="M15.6335 25.0003L34.3662 25.0003M34.3662 25.0003L27.2478 32.1188M34.3662 25.0003L27.2478 17.8819" stroke="black" strokeWidth="1.5"/>
 </svg> */
 }

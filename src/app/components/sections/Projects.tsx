@@ -9,7 +9,7 @@ interface Project {
   title: string;
   category: string;
   client: string;
-  year: string;
+  year: number;
   body: {
     title: string;
     link: string;
@@ -20,66 +20,56 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Project One",
-    category: "Web Development",
-    client: "Practice",
-    year: "2024",
+    title: "Can Yilmaz Portfolio",
+    category: "Landing Page",
+    client: "Can Yilmaz",
+    year: 2023,
     body: {
-      title: "Project title / Description",
-      link: "https://fettah.dev",
-      list: ["Development", "Web Animation", "React", "Next.js"],
+      title: "Can Yilmaz's personal animated portfolio",
+      link: "https://can-portfolio-plum.vercel.app/",
+      list: [
+        "Landing Page Development",
+        "Web Animation",
+        "React",
+        "Next.js",
+        "GSAP",
+      ],
       gallery: [
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
+        { src: "/projects images/can-yilmaz-01.png", alt: "" },
+        { src: "/projects images/can-yilmaz-02.png", alt: "" },
+        { src: "/projects images/can-yilmaz-03.png", alt: "" },
       ],
     },
   },
   {
-    title: "Project One",
-    category: "Web Development",
-    client: "Practice",
-    year: "2024",
+    title: "Entrepreneurs",
+    category: "React App",
+    client: "Qoves",
+    year: 2024,
     body: {
-      title: "Project title / Description",
-      link: "https://fettah.dev",
-      list: ["Development", "Web Animation", "React", "Next.js"],
+      title: "A React site for Qoves client's entrepreneurs",
+      link: "https://entrepreneurs-tawny.vercel.app/",
+      list: ["React", "Landing Page", "Next.js", "GSAP", "Lottie Files"],
       gallery: [
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
+        { src: "/projects images/ent-01.png", alt: "" },
+        { src: "/projects images/ent-02.png", alt: "" },
+        { src: "/projects images/ent-03.png", alt: "" },
       ],
     },
   },
   {
-    title: "Project One",
-    category: "Web Development",
-    client: "Practice",
-    year: "2024",
+    title: "Komet Website",
+    category: "React App",
+    client: "Qoves",
+    year: 2024,
     body: {
-      title: "Project title / Description",
-      link: "https://fettah.dev",
-      list: ["Development", "Web Animation", "React", "Next.js"],
+      title: "A React site for Qoves client's Komet",
+      link: "https://komet-next.vercel.app/",
+      list: ["React", "Next.js", "Landing Page", "GSAP", "THREE.js"],
       gallery: [
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-      ],
-    },
-  },
-  {
-    title: "Project One",
-    category: "Web Development",
-    client: "Practice",
-    year: "2024",
-    body: {
-      title: "Project title / Description",
-      link: "https://fettah.dev",
-      list: ["Development", "Web Animation", "React", "Next.js"],
-      gallery: [
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
-        // { src: "", alt: "" },
+        { alt: "", src: "/projects images/komet-01.png" },
+        { alt: "", src: "/projects images/komet-02.png" },
+        { alt: "", src: "/projects images/komet-03.png" },
       ],
     },
   },
@@ -195,7 +185,7 @@ const ProjectRow = ({ title, category, client, year, body }: Project) => {
 
 export default function Projects() {
   return (
-    <section className="projects">
+    <section id="projects" className="projects">
       <div className="projects-table">
         <div className="row header">
           <div className="cell">Project</div>

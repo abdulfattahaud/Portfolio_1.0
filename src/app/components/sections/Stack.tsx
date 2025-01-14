@@ -47,8 +47,8 @@ export default function Stack() {
     ScrollTrigger.create({
       trigger: "#stack",
       markers: false,
-      start: "top 70px",
-      end: "100% 70px",
+      start: "top 0",
+      end: "100% 0",
       pin: true,
       pinSpacing: false,
     });

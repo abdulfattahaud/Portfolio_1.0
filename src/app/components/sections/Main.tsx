@@ -3,8 +3,6 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ALetter, ELetter, FLetter, HLetter, TLetter } from "../ui/HeroLetters";
-import CanvasComp from "./CanvasComp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,9 +74,12 @@ export default function Main() {
   });
   return (
     <section className="hero" id="main">
-      <div className="canvas-wrapper">
-        <CanvasComp />
+      <div className="h-full flex items-center bg-black justify-center">
+        <h1 className="text-[8rem] font-bold">AbdulFettah Adwani</h1>
       </div>
+      {/* <div className="canvas-wrapper"> */}
+      {/* <CanvasComp /> */}
+      {/* </div> */}
       {/* <div className="letters">
           <FLetter />
           <ELetter />

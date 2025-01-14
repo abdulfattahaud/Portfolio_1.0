@@ -8,44 +8,41 @@ import { useEffect, useState } from "react";
 // import { useControls } from "leva";
 
 export default function TDLetters() {
-  const { viewport } = useThree();
-  const [scale, setScale] = useState(viewport.width / 7.6);
-  const updateScale = () => {
-    if (document.documentElement.clientWidth < 768) {
-      setScale(0.6);
-    } else {
-      setScale(viewport.width / 7.6);
-    }
-  };
-  useEffect(() => {
-    updateScale();
-    window.addEventListener("resize", updateScale);
-    return () => {
-      window.removeEventListener("resize", updateScale);
-    };
-  }, []);
+  // const { viewport } = useThree();
+  // const [scale, setScale] = useState(viewport.width / 10);
+  // const [center, setCenter] = useState(viewport.width / 2);
+  // const updateScale = () => {
+  //   setCenter(viewport.width / 2);
+  //   if (document.documentElement.clientWidth < 768) {
+  //     setScale(0.6);
+  //   } else {
+  //     setScale(viewport.width / 10);
+  //   }
+  // };
+  // useEffect(() => {
+  //   updateScale();
+  //   window.addEventListener("resize", updateScale);
+  //   return () => {
+  //     window.removeEventListener("resize", updateScale);
+  //   };
+  // }, []);
   // const { x } = useControls("3D Letters", { x: { value: 0, step: 0.1 } });
 
   // const { scrollYProgress } = useScroll();
   // const y = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
   // const springY = useSpring(y, { stiffness: 400, damping: 90 });
+  const { gl, camera } = useThree();
+  const resizeHandler = () => {
+    gl.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // camera. = window.innerWidth / window.innerHeight;
+  };
+  useEffect(() => {
+    gl.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  }, []);
   return (
-    <motion.group scale={scale} position={[0, viewport.height / 2 - 1, -2]}>
-      {/* <motion.group position={[0, springY, 0]}> */}
-      <Svg src="/FLetter.svg" scale={0.01} position={[-5.3, 0, 0]} />
-      {/* </motion.group> */}
-      {/* <motion.group position={[0, springY, 0]}> */}
-      <Svg src="/ELetter.svg" scale={0.01} position={[-3.3, 0, 0]} />
-      {/* </motion.group> */}
-      {/* <motion.group position={[0, springY, 0]}> */}
-      <Svg src="/TLetter.svg" scale={0.01} position={[-1.3, 0, 0]} />
-      {/* </motion.group> */}
-      {/* <motion.group position={[0, springY, 0]}> */}
-      <Svg src="/TLetter.svg" scale={0.01} position={[1, 0, 0]} />
-      {/* </motion.group> */}
-      {/* <motion.group position={[0, springY, 0]}> */}
-      <Svg src="/HLetter.svg" scale={0.01} position={[3.3, 0, 0]} />
-      {/* </motion.group> */}
+    <motion.group position={[0, 0, -2]}>
+      <Svg src="/fettah.svg" scale={0.008} position={[0, 0, 0]} />
     </motion.group>
   );
 }

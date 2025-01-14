@@ -33,28 +33,29 @@ export default function Header({ loaded }: { loaded: boolean }) {
           <li
             className="active"
             onClick={() => {
-              lenis.scrollTo("#main");
+              lenis.scrollTo("#main", { offset: -70 });
             }}
           >
             Home
           </li>
           <li
             onClick={() => {
-              lenis.scrollTo("#projects");
+              lenis.scrollTo("#projects", { offset: -70 });
+              console.log(lenis);
             }}
           >
             Projects
           </li>
           <li
             onClick={() => {
-              lenis.scrollTo("#about");
+              lenis.scrollTo("#about", { offset: -70 });
             }}
           >
             About
           </li>
           <li
             onClick={() => {
-              lenis.scrollTo("#contact");
+              lenis.scrollTo("#contact", { offset: -70 });
             }}
           >
             Contact

@@ -10,19 +10,21 @@ import Footer from "./components/sections/Footer";
 import LoadScreen from "./components/ui/LoadScreen";
 import { useState } from "react";
 import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   return (
     <main>
       <Lenify>
-        <LoadScreen setLoading={setLoading} loading={loading} />
+        {/* <LoadScreen setLoading={setLoading} loading={loading} /> */}
         <Header loaded={loading} />
         <Main />
         <Peek />
         <Projects />
         <Stack />
         <CT />
+        <Contact />
         <Footer />
       </Lenify>
     </main>
