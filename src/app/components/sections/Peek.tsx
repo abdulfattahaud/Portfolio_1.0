@@ -3,8 +3,8 @@ export default function Peek() {
     <div id="about" className="peek dashed-border">
       <article className="content">
         <h1>
-          Experienced Freelancer Specializing in
-          <br /> WebGl and Frontend Development
+          Front-end developer specialized in <br />
+          Web animations and 3D graphics with WebGL
         </h1>
         <p>
           With a passion for creativity and expertise in WebGL and Frontend

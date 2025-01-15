@@ -1,9 +1,9 @@
 :root {
   --primary-color: #cc3737;
   --secondary-color: #fff;
-  --bg: #121212;
-  --margin-x: 80px;
-  --margin-y: 120px;
+  --bg: #0f0f0f;
+  --margin-x: 5rem;
+  --margin-y: 7.5rem;
 }
 
 #header {
@@ -135,6 +135,7 @@
   padding: var(--margin-y) var(--margin-x);
   background-color: white;
   z-index: 2;
+  height: 100vh;
   header {
     display: flex;
     flex-direction: column;

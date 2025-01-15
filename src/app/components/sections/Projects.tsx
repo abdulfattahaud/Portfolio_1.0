@@ -5,6 +5,10 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
+
 interface Project {
   title: string;
   category: string;

@@ -13,18 +13,19 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function CT() {
+  // Making an issue when opening the projects, refresh scroll trigger didn't work
   // useGSAP(() => {
   //   ScrollTrigger.create({
   //     trigger: "#ct",
   //     markers: false,
-  //     start: "top 70px",
-  //     end: "100% 70px",
+  //     start: "top 0",
+  //     end: "100% 0",
   //     pin: true,
   //     pinSpacing: false,
   //   });
   // });
   return (
-    <div id="ct" className="ct dashed-border dashed-border-light">
+    <div id="ct" className="ct h-screen dashed-border dashed-border-light">
       <header>
         <h1>Customer Testimonials</h1>
         <p>Hear our what clients have to say about our work</p>
