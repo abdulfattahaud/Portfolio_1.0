@@ -25,7 +25,7 @@ export default function CT() {
   //   });
   // });
   return (
-    <div id="ct" className="ct h-screen dashed-border dashed-border-light">
+    <div id="ct" className="ct dashed-border dashed-border-light">
       <header>
         <h1>Customer Testimonials</h1>
         <p>Hear our what clients have to say about our work</p>
