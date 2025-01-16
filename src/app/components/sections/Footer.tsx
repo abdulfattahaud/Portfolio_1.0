@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="upper">
         <div className="logo-wrapper">
           <LogoBlack />
-          <span>Fettah Aud</span>
+          <span>fettahaud@gmail.com</span>
         </div>
         <div className="social-links">
           <Link
@@ -21,7 +21,7 @@ export default function Footer() {
           <Link
             aria-label="Instagram link to Fettah Aud's profile"
             target="_blank"
-            href="https://www.instagram.com/fettahaud/"
+            href="https://www.instagram.com/abdulfattah.aud/"
           >
             <IG />
           </Link>
@@ -42,7 +42,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="lower dashed-border dashed-border-light dashed-border-t">
-        <span className="copy">© 2024 Fettah Aud. All rights reserved.</span>
+        <span className="copy">
+          © 2025 Abdulfettah Adwani. All rights reserved.
+        </span>
         <div>
           <span>TÜRKİYE İstanbul</span>
           <svg
