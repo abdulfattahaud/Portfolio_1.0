@@ -7,10 +7,8 @@ import Peek from "./components/sections/Peek";
 import Stack from "./components/sections/Stack";
 import CT from "./components/sections/CT";
 import Footer from "./components/sections/Footer";
-import LoadScreen from "./components/ui/LoadScreen";
 import { useState } from "react";
 import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +22,7 @@ export default function Home() {
         <Projects />
         <Stack />
         <CT />
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
       </Lenify>
     </main>
